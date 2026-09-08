@@ -20,8 +20,8 @@
         <a href="#contato">contato</a>
       </nav>
       <a class="status" href="#contato">disponível para criar</a>
-      <div class="lang-switch" role="group" aria-label="idioma"><button type="button" data-lang="pt" aria-pressed="true">por</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">en</button></div>
     </header>
+    <div class="lang-switch" role="group" aria-label="idioma"><button type="button" data-lang="pt" aria-pressed="true">por</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">en</button></div>
 
     <main>
       <section class="hero wrap" id="inicio">
@@ -106,9 +106,9 @@
           ['.contact .eyebrow','04 / shall we talk?'],['.contact a','say hello<span>.</span>'],['footer span:nth-child(2)','made in lowercase']
         ]
       };
-      const setLanguage = (lang) => { translations[lang].forEach(([selector, html]) => { const el=document.querySelector(selector); if (el) el.innerHTML=html; }); document.documentElement.lang=lang==='en'?'en':'pt-br'; document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang))); localStorage.setItem('portfolio-lang',lang); };
+      const setLanguage = (lang) => { translations[lang].forEach(([selector, html]) => { const el=document.querySelector(selector); if (el) el.innerHTML=html; }); document.documentElement.lang=lang==='en'?'en':'pt-br'; document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang))); };
       document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));
-      setLanguage(localStorage.getItem('portfolio-lang') || 'pt');
+      setLanguage('pt');
     </script>
   </body>
 </html>
