@@ -20,6 +20,7 @@
         <a href="#contato">contato</a>
       </nav>
       <a class="status" href="#contato">disponível para criar</a>
+      <div class="lang-switch" role="group" aria-label="idioma"><button type="button" data-lang="pt" aria-pressed="true">por</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">en</button></div>
     </header>
 
     <main>
@@ -86,5 +87,28 @@
       <span>feito em minúsculas</span>
       <a href="https://github.com/tithr" target="_blank" rel="noreferrer">github ↗</a>
     </footer>
+    <script>
+      const translations = {
+        pt: [
+          ['nav a:nth-child(1)','sobre'],['nav a:nth-child(2)','trabalhos'],['nav a:nth-child(3)','contato'],['.status','disponível para criar'],
+          ['.hero .eyebrow','estudante de design / brasil'],['h1','ideias curiosas,<br /><em>feitas para sentir.</em>'],['.hero-bottom p','sou estudante e apaixonado por design. gosto de transformar conceitos, referências e conversas em experiências que fazem sentido.'],['.round-link','ver projetos <span>↓</span>'],
+          ['.intro > .eyebrow','01 / manifesto'],['.intro-copy p:nth-child(1)','não vejo o design como decoração. para mim, ele é uma forma de <strong>dar clareza, presença e personalidade</strong> às coisas.'],['.intro-copy p:nth-child(2)','estou aprendendo todos os dias, colecionando boas referências e criando meu próprio jeito de olhar.'],
+          ['.work .eyebrow','02 / selecionados'],['.section-title h2','algumas coisas<br />que fiz por aí.'],['.project-one .project-art span','não é<br />só uma<br />ideia.'],['.project-two .project-art span','tudo<br />começa<br />com um<br />rabisco.'],['.project-three .project-art span','olhar,<br />testar,<br />refazer.'],['.project-one .project-info span:first-child','identidade visual'],['.project-two .project-info span:first-child','direção de arte'],['.project-three .project-info span:first-child','experimento digital'],
+          ['.nevy > .eyebrow','03 / uma nota sobre nevy'],['.nevy h2','nevy é parte<br />do meu processo.'],['.nevy-grid p:nth-of-type(1)','<strong>nevy</strong> é o projeto que estou construindo para explorar, na prática, como tecnologia e design podem transformar ideias em experiências simples, úteis e humanas.'],['.nevy-grid p:nth-of-type(2)','estou animado para ver até onde ele pode chegar. cada teste, conversa e detalhe abre um caminho novo para criar algo que realmente faça sentido.'],['.nevy-sign','sobre o <b>nevy</b> ✦'],
+          ['.contact .eyebrow','04 / vamos conversar?'],['.contact a','dizer oi<span>.</span>'],['footer span:nth-child(2)','feito em minúsculas']
+        ],
+        en: [
+          ['nav a:nth-child(1)','about'],['nav a:nth-child(2)','work'],['nav a:nth-child(3)','contact'],['.status','available to create'],
+          ['.hero .eyebrow','design student / brazil'],['h1','curious ideas,<br /><em>made to be felt.</em>'],['.hero-bottom p','i am a student who loves design. i turn concepts, references and conversations into experiences that feel meaningful.'],['.round-link','see projects <span>↓</span>'],
+          ['.intro > .eyebrow','01 / manifesto'],['.intro-copy p:nth-child(1)','i do not see design as decoration. to me, it is a way to give things <strong>clarity, presence and personality</strong>.'],['.intro-copy p:nth-child(2)','i am learning every day, collecting good references and building my own way of seeing.'],
+          ['.work .eyebrow','02 / selected work'],['.section-title h2','a few things<br />i have made.'],['.project-one .project-art span','it is not<br />just<br />an idea.'],['.project-two .project-art span','everything<br />starts<br />with a<br />sketch.'],['.project-three .project-art span','look,<br />test,<br />repeat.'],['.project-one .project-info span:first-child','visual identity'],['.project-two .project-info span:first-child','art direction'],['.project-three .project-info span:first-child','digital experiment'],
+          ['.nevy > .eyebrow','03 / a note on nevy'],['.nevy h2','nevy is part<br />of my process.'],['.nevy-grid p:nth-of-type(1)','<strong>nevy</strong> is the project i am building to explore how technology and design can turn ideas into experiences that are simple, useful and human.'],['.nevy-grid p:nth-of-type(2)','i am excited to see where it can go. every test, conversation and detail opens a new path toward something that truly makes sense.'],['.nevy-sign','about <b>nevy</b> ✦'],
+          ['.contact .eyebrow','04 / shall we talk?'],['.contact a','say hello<span>.</span>'],['footer span:nth-child(2)','made in lowercase']
+        ]
+      };
+      const setLanguage = (lang) => { translations[lang].forEach(([selector, html]) => { const el=document.querySelector(selector); if (el) el.innerHTML=html; }); document.documentElement.lang=lang==='en'?'en':'pt-br'; document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang))); localStorage.setItem('portfolio-lang',lang); };
+      document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));
+      setLanguage(localStorage.getItem('portfolio-lang') || 'pt');
+    </script>
   </body>
 </html>
