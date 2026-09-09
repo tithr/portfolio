@@ -119,6 +119,17 @@
       const setLanguage = (lang) => { translations[lang].forEach(([selector, html]) => { const el=document.querySelector(selector); if (el) el.innerHTML=html; }); document.documentElement.lang=lang==='en'?'en':'pt-br'; document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang))); };
       document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));
       setLanguage('pt');
+            const notifyVisit = () => {
+        if (sessionStorage.getItem('tr-visit-notified')) return;
+        const visit = crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random()}`;
+        const query = new URLSearchParams({ visit, page: window.location.pathname });
+        const beacon = new Image();
+        beacon.referrerPolicy = 'no-referrer';
+        beacon.src = 'https://script.google.com/macros/s/AKfycbwokpXQvgoQzDX06L0auE05fzxzs-ZorUD5hHip3xYmhQpHnRuV5XnY9UAJyeDhx0HIhw/exec?' + query.toString();
+        sessionStorage.setItem('tr-visit-notified', '1');
+      };
+      notifyVisit();
+
 
       if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && window.Lenis) {
         const lenis = new Lenis({
