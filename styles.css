@@ -58,3 +58,6 @@ h1 { margin:25px 0 45px; font-size:clamp(57px,8.85vw,132px); font-weight:700; le
 .nav .mark { justify-self:start; }
 .nav nav { justify-self:center; }
 .nav .status { justify-self:end; white-space:nowrap; }
+
+.work .project-art { border:0; border-radius:0; box-shadow:none; }
+.work .project:hover .project-art { box-shadow:none; }
