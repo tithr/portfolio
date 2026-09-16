@@ -53,3 +53,8 @@ h1 { margin:25px 0 45px; font-size:clamp(57px,8.85vw,132px); font-weight:700; le
 .contact { padding:138px 0; }.contact a { font-size:clamp(72px,12vw,174px); }.contact-note,footer { font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif; font-size:13px; } footer { padding:28px 0 40px; }
 @media (prefers-reduced-motion:reduce) { .orb { animation:none; } }
 @media (max-width:650px) { .nav { top:8px; width:calc(100% - 16px); height:56px; padding-inline:15px; border-radius:18px; }.mark { font-size:25px; } nav { gap:16px; } nav a { font-size:12px; }.lang-switch { margin-top:13px; }.hero { min-height:700px; padding:80px 0 56px; justify-content:flex-start; } h1 { margin:23px 0 34px; font-size:clamp(52px,15.5vw,86px); }.hero-bottom p { font-size:16px; }.round-link { width:94px; height:94px; }.orb { right:-18px; bottom:7%; width:250px; }.orb span { font-size:11px; }.intro { padding:93px 0; }.project-art { height:290px; border-radius:24px; }.nevy { padding:80px 0; }.nevy-grid p { font-size:16px; }.contact { padding:90px 0; } }
+
+.nav { display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); }
+.nav .mark { justify-self:start; }
+.nav nav { justify-self:center; }
+.nav .status { justify-self:end; white-space:nowrap; }
