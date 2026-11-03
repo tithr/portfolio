@@ -1,15 +1,9 @@
-// node tools/check-i18n.js  (needs playwright)
-// Loads every page in english and reports:
-//  - visible text that is not inside a [data-i18n] element
-//  - alt / aria-label / meta description without data-i18n-attr
-//  - data-i18n keys with no english translation
 const { chromium } = require('playwright');
 const path = require('path');
 const fs = require('fs');
 
 const root = path.resolve(__dirname, '..');
 const pages = fs.readdirSync(root).filter((f) => f.endsWith('.html'));
-// text that is the same in both languages
 const SAME = [/^tr\.?$/, /^por$/, /^en$/, /^\/$/, /^\d{2}$/, /^\d{4} ↗$/, /^© 2026 /, /^github ↗$/, /@/, /^\.$/, /^↓$/, /^nevy$/];
 
 (async () => {
