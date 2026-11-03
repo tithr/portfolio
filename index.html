@@ -9,11 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <meta name="theme-color" content="#03050a" />
-    <link rel="stylesheet" href="styles.css?v=20" />
+    <meta name="theme-color" content="#07090e" />
+    <link rel="stylesheet" href="styles.css?v=21" />
   </head>
   <body>
-    <div class="aurora" aria-hidden="true"></div>
     <header class="nav wrap">
       <a class="mark" href="#inicio" aria-label="voltar ao início">tr<span>.</span></a>
       <nav aria-label="navegação principal">
@@ -147,44 +146,23 @@
         requestAnimationFrame(raf);
       }
 
-      /* dynamic gradient + liquid glass sheen: react to pointer and scroll */
+      /* liquid glass sheen: the highlight follows the pointer */
       (() => {
-        const root = document.documentElement;
-        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        const glass = [...document.querySelectorAll('.nav, .lang-switch, .round-link, .orb, .nevy-grid > div')];
-        const state = { tx: innerWidth * 0.7, ty: innerHeight * 0.22, x: innerWidth * 0.7, y: innerHeight * 0.22, px: 0, py: 0, sheen: false, raf: 0 };
-
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const glass = [...document.querySelectorAll('.lang-switch, .round-link, .orb, .nevy-grid > div')];
+        let px = 0, py = 0, raf = 0;
         const frame = () => {
-          state.raf = 0;
-          state.x += (state.tx - state.x) * 0.08;
-          state.y += (state.ty - state.y) * 0.08;
-          root.style.setProperty('--mx', state.x.toFixed(1) + 'px');
-          root.style.setProperty('--my', state.y.toFixed(1) + 'px');
-          if (state.sheen) {
-            const rects = glass.map((el) => el.getBoundingClientRect());
-            glass.forEach((el, i) => {
-              el.style.setProperty('--px', (state.px - rects[i].left).toFixed(1) + 'px');
-              el.style.setProperty('--py', (state.py - rects[i].top).toFixed(1) + 'px');
-            });
-            state.sheen = false;
-          }
-          if (Math.abs(state.tx - state.x) + Math.abs(state.ty - state.y) > 0.5) state.raf = requestAnimationFrame(frame);
+          raf = 0;
+          const rects = glass.map((el) => el.getBoundingClientRect());
+          glass.forEach((el, i) => {
+            el.style.setProperty('--px', (px - rects[i].left).toFixed(1) + 'px');
+            el.style.setProperty('--py', (py - rects[i].top).toFixed(1) + 'px');
+          });
         };
-
-        if (!reduce) {
-          addEventListener('pointermove', (e) => {
-            state.tx = e.clientX; state.ty = e.clientY;
-            state.px = e.clientX; state.py = e.clientY; state.sheen = true;
-            if (!state.raf) state.raf = requestAnimationFrame(frame);
-          }, { passive: true });
-        }
-
-        const onScroll = () => {
-          const max = root.scrollHeight - innerHeight;
-          root.style.setProperty('--scroll', max > 0 ? (scrollY / max).toFixed(3) : '0');
-        };
-        addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
+        addEventListener('pointermove', (e) => {
+          px = e.clientX; py = e.clientY;
+          if (!raf) raf = requestAnimationFrame(frame);
+        }, { passive: true });
       })();
     </script>
   </body>
