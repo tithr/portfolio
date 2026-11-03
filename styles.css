@@ -287,3 +287,12 @@ a.nevy-sign:hover, a.nevy-sign:hover b { color: var(--sky); }
 .case-strip .phone { --pw: 340px; } .case-decision .phone { --pw: 300px; } .case-pair .phone { --pw: 260px; } .project-shot.phone { --pw: 140px; }
 @media (max-width: 650px) { .project-shot { width: 100px; } .project-shot.phone { --pw: 100px; } }
 .project-shot.phone { position: absolute; }
+
+/* mobile hero: keep the glass slab and colour squares inside the page margins,
+   below the text and button instead of on top of them */
+@media (max-width: 650px) {
+  .hero { --s: min(66vw, 250px); min-height: 0; padding-bottom: calc(var(--s) * 1.45 + 48px); }
+  .orb { right: 0; bottom: 40px; }
+  .hero::before { right: calc(var(--s) * .42); bottom: calc(40px + var(--s) * .5); }
+  .hero::after { right: 0; bottom: calc(40px - var(--s) * .06); }
+}
