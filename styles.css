@@ -27,9 +27,7 @@ h1, h2, p { margin-top: 0; }
 /* ---------- liquid glass surface (shared) ---------- */
 .lang-switch, .round-link, .orb, .nevy-grid > div {
   background-color: rgba(255,255,255,.05);
-  background-image:
-    radial-gradient(180px circle at var(--px, 50%) var(--py, -20%), rgba(255,255,255,.26), transparent 70%),
-    linear-gradient(135deg, rgba(255,255,255,.2), rgba(255,255,255,.05) 42%, rgba(255,255,255,.12));
+  background-image: linear-gradient(135deg, rgba(255,255,255,.2), rgba(255,255,255,.05) 42%, rgba(255,255,255,.12));
   border: 1px solid rgba(255,255,255,.22);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.55),
@@ -79,9 +77,9 @@ h1 em {
 @keyframes shine { to { background-position: 200% 0; } }
 .hero-bottom { position: relative; z-index: 1; display: flex; align-items: center; gap: 34px; max-width: 560px; }
 .hero-bottom p { margin: 0; color: #d2d2d7; font-size: 17px; letter-spacing: -.02em; line-height: 1.48; }
-.round-link { flex: none; width: 104px; height: 104px; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 12px; font-weight: 600; letter-spacing: -.02em; transition: transform .3s, filter .3s; }
+.round-link { flex: none; width: 104px; height: 104px; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 12px; font-weight: 600; letter-spacing: -.02em; transition: transform .3s; }
 .round-link span { margin-top: 3px; font-size: 21px; color: #dff2ff; }
-.round-link:hover { transform: translateY(-3px); filter: brightness(1.25); }
+.round-link:hover { transform: translateY(-3px); }
 
 /* sharp colour slabs behind the glass slab, so the blur has something to bend */
 .hero::before, .hero::after { content: ""; position: absolute; z-index: -1; pointer-events: none; }

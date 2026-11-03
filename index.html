@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <meta name="theme-color" content="#07090e" />
-    <link rel="stylesheet" href="styles.css?v=21" />
+    <link rel="stylesheet" href="styles.css?v=22" />
   </head>
   <body>
     <header class="nav wrap">
@@ -146,24 +146,6 @@
         requestAnimationFrame(raf);
       }
 
-      /* liquid glass sheen: the highlight follows the pointer */
-      (() => {
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-        const glass = [...document.querySelectorAll('.lang-switch, .round-link, .orb, .nevy-grid > div')];
-        let px = 0, py = 0, raf = 0;
-        const frame = () => {
-          raf = 0;
-          const rects = glass.map((el) => el.getBoundingClientRect());
-          glass.forEach((el, i) => {
-            el.style.setProperty('--px', (px - rects[i].left).toFixed(1) + 'px');
-            el.style.setProperty('--py', (py - rects[i].top).toFixed(1) + 'px');
-          });
-        };
-        addEventListener('pointermove', (e) => {
-          px = e.clientX; py = e.clientY;
-          if (!raf) raf = requestAnimationFrame(frame);
-        }, { passive: true });
-      })();
     </script>
   </body>
 </html>
