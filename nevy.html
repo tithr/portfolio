@@ -3,143 +3,145 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="nevy: um app iOS em construção para registrar refeições com uma foto. Case de tiago rosario." />
-    <title>nevy · tr portfolio</title>
+    <meta name="description" data-i18n-attr="content:meta.nevy" content="nevy: um app iOS em construção para registrar refeições com uma foto. Case de tiago rosario." />
+    <title data-i18n="title.nevy">nevy · tr portfolio</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <meta name="theme-color" content="#07090e" />
-    <link rel="stylesheet" href="styles.css?v=26" />
+    <link rel="stylesheet" href="styles.css?v=27" />
   </head>
   <body class="case-page">
     <header class="nav wrap">
-      <a class="mark" href="index.html" aria-label="voltar ao início">tr<span>.</span></a>
-      <nav aria-label="navegação principal">
-        <a href="index.html#sobre">sobre</a>
-        <a href="index.html#trabalhos">trabalhos</a>
-        <a href="index.html#contato">contato</a>
+      <a class="mark" href="index.html" aria-label="voltar ao início" data-i18n-attr="aria-label:aria.home">tr<span>.</span></a>
+      <nav aria-label="navegação principal" data-i18n-attr="aria-label:aria.nav">
+        <a href="index.html#sobre" data-i18n="nav.about">sobre</a>
+        <a href="index.html#trabalhos" data-i18n="nav.work">trabalhos</a>
+        <a href="index.html#contato" data-i18n="nav.contact">contato</a>
       </nav>
-      <a class="status" href="index.html#contato">disponível para criar</a>
+      <a class="status" href="index.html#contato" data-i18n="nav.status">disponível para criar</a>
     </header>
+    <div class="lang-switch" role="group" aria-label="idioma" data-i18n-attr="aria-label:aria.lang"><button type="button" data-lang="pt" aria-pressed="true">por</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">en</button></div>
 
     <main>
       <section class="case-hero wrap">
-        <a class="case-back" href="index.html#trabalhos">← trabalhos</a>
-        <p class="eyebrow">01 / case</p>
+        <a class="case-back" href="index.html#trabalhos" data-i18n="case.back">← trabalhos</a>
+        <p class="eyebrow" data-i18n="case.eyebrow">01 / case</p>
         <h1>nevy<span>.</span></h1>
-        <p class="case-lead">um app iOS em construção para registrar o que você come com uma foto, e ver alimentação e treino no mesmo lugar.</p>
+        <p class="case-lead" data-i18n="case.lead">um app iOS em construção para registrar o que você come com uma foto, e ver alimentação e treino no mesmo lugar.</p>
         <dl class="case-meta">
-          <div><dt>papel</dt><dd>produto, ui/ux e desenvolvimento</dd></div>
-          <div><dt>plataforma</dt><dd>iOS, SwiftUI</dd></div>
-          <div><dt>ferramentas</dt><dd>Figma</dd></div>
-          <div><dt>status</dt><dd>em construção, 2026</dd></div>
+          <div><dt data-i18n="case.role.t">papel</dt><dd data-i18n="case.role.d">produto, ui/ux e desenvolvimento</dd></div>
+          <div><dt data-i18n="case.platform.t">plataforma</dt><dd data-i18n="case.platform.d">iOS, SwiftUI</dd></div>
+          <div><dt data-i18n="case.tools.t">ferramentas</dt><dd data-i18n="case.tools.d">Figma</dd></div>
+          <div><dt data-i18n="case.status.t">status</dt><dd data-i18n="case.status.d">em construção, 2026</dd></div>
         </dl>
-        <div class="case-strip" aria-label="telas do nevy">
-          <figure class="phone"><div class="phone-screen"><img src="img/nevy/01-ola.webp" alt="tela de boas-vindas: olá, sou o nevy. Monitorar o que come deve ser tão fácil como tirar uma foto." width="402" height="874" /></div></figure>
-          <figure class="phone"><div class="phone-screen"><img src="img/nevy/03-hoje.webp" alt="tela do dia com a lista de refeições, o total de calorias, os macros e o botão de câmera no centro." width="402" height="874" /></div></figure>
-          <figure class="phone"><div class="phone-screen"><img src="img/nevy/04-camera.webp" alt="câmera apontada para um prato com brócolis, cenoura, repolho, arroz e carne moída." width="402" height="874" /></div></figure>
+        <div class="case-strip" aria-label="telas do nevy" data-i18n-attr="aria-label:case.strip">
+          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.ola" src="img/nevy/01-ola.webp" alt="tela de boas-vindas: olá, sou o nevy. Monitorar o que come deve ser tão fácil como tirar uma foto." width="402" height="874" /></div></figure>
+          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.hoje" src="img/nevy/03-hoje.webp" alt="tela do dia com a lista de refeições, o total de calorias, os macros e o botão de câmera no centro." width="402" height="874" /></div></figure>
+          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.camera" src="img/nevy/04-camera.webp" alt="câmera apontada para um prato com brócolis, cenoura, repolho, arroz e carne moída." width="402" height="874" /></div></figure>
         </div>
       </section>
 
       <section class="case-section wrap">
-        <p class="eyebrow">contexto</p>
+        <p class="eyebrow" data-i18n="case.context.e">contexto</p>
         <div class="case-copy">
-          <h2>registrar o que se come dá trabalho demais.</h2>
-          <p>a maioria dos apps de alimentação pede para digitar cada item, separa comida e atividade em produtos diferentes e mostra números sem dizer o que eles significam. Dá trabalho antes de ajudar.</p>
+          <h2 data-i18n="case.context.h">registrar o que se come dá trabalho demais.</h2>
+          <p data-i18n="case.context.p">a maioria dos apps de alimentação pede para digitar cada item, separa comida e atividade em produtos diferentes e mostra números sem dizer o que eles significam. Dá trabalho antes de ajudar.</p>
         </div>
       </section>
 
       <section class="case-section wrap">
-        <p class="eyebrow">pergunta</p>
+        <p class="eyebrow" data-i18n="case.question.e">pergunta</p>
         <div class="case-copy">
-          <h2 class="case-question">e se registrar uma refeição fosse tão fácil quanto tirar uma foto?</h2>
-          <p>essa frase está na primeira tela do app e virou o critério para o resto: se uma etapa deixa o registro mais lento que tirar uma foto, ela precisa ter um bom motivo para estar ali.</p>
+          <h2 class="case-question" data-i18n="case.question.h">e se registrar uma refeição fosse tão fácil quanto tirar uma foto?</h2>
+          <p data-i18n="case.question.p">essa frase está na primeira tela do app e virou o critério para o resto: se uma etapa deixa o registro mais lento que tirar uma foto, ela precisa ter um bom motivo para estar ali.</p>
         </div>
       </section>
 
       <section class="case-section wrap">
-        <p class="eyebrow">processo</p>
+        <p class="eyebrow" data-i18n="case.process.e">processo</p>
         <div class="case-copy">
-          <h2>quatro decisões de design.</h2>
+          <h2 data-i18n="case.process.h">quatro decisões de design.</h2>
         </div>
       </section>
 
       <section class="case-decision wrap">
-        <figure class="phone"><div class="phone-screen"><img src="img/nevy/02-objetivo.webp" alt="onboarding perguntando o objetivo: perder peso, ser mais saudável ou ganhar hipertrofia." width="402" height="874" loading="lazy" /></div></figure>
+        <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.objetivo" src="img/nevy/02-objetivo.webp" alt="onboarding perguntando o objetivo: perder peso, ser mais saudável ou ganhar hipertrofia." width="402" height="874" loading="lazy" /></div></figure>
         <div>
           <span class="case-num">01</span>
-          <h3>mostrar valor antes de pedir dados.</h3>
-          <p>o onboarding começa mostrando o que o app faz e só depois pergunta o objetivo. Cada opção abre uma explicação curta, e termos como taxa metabólica basal são explicados na própria tela.</p>
+          <h3 data-i18n="d1.h">mostrar valor antes de pedir dados.</h3>
+          <p data-i18n="d1.p">o onboarding começa mostrando o que o app faz e só depois pergunta o objetivo. Cada opção abre uma explicação curta, e termos como taxa metabólica basal são explicados na própria tela.</p>
         </div>
       </section>
 
       <section class="case-decision case-decision-flip wrap">
         <div class="case-pair">
-          <figure class="phone"><div class="phone-screen"><img src="img/nevy/04-camera.webp" alt="câmera identificando um prato." width="402" height="874" loading="lazy" /></div></figure>
-          <figure class="phone"><div class="phone-screen"><img src="img/nevy/05-resultado-nutricao.webp" alt="resultado: prato identificado, com macros, lista de alimentos estimados e o botão registrar." width="402" height="874" loading="lazy" /></div></figure>
+          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.camera2" src="img/nevy/04-camera.webp" alt="câmera identificando um prato." width="402" height="874" loading="lazy" /></div></figure>
+          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.resultado" src="img/nevy/05-resultado-nutricao.webp" alt="resultado: prato identificado, com macros, lista de alimentos estimados e o botão registrar." width="402" height="874" loading="lazy" /></div></figure>
         </div>
         <div>
           <span class="case-num">02</span>
-          <h3>a ia sugere, a pessoa confirma.</h3>
-          <p>a foto gera uma estimativa. O resultado mostra os macros, cada alimento com a porção aproximada (“~100g”) e um texto explicando como o prato foi identificado. Dá para editar tudo antes de salvar, e nada entra no histórico até a pessoa tocar em registrar. Se a análise falhar, ainda dá para registrar à mão.</p>
+          <h3 data-i18n="d2.h">a ia sugere, a pessoa confirma.</h3>
+          <p data-i18n="d2.p">a foto gera uma estimativa. O resultado mostra os macros, cada alimento com a porção aproximada (“~100g”) e um texto explicando como o prato foi identificado. Dá para editar tudo antes de salvar, e nada entra no histórico até a pessoa tocar em registrar. Se a análise falhar, ainda dá para registrar à mão.</p>
         </div>
       </section>
 
       <section class="case-decision wrap">
-        <figure class="phone"><div class="phone-screen"><img src="img/nevy/03-hoje.webp" alt="tela do dia com refeições, total de 1.179 calorias e macros." width="402" height="874" loading="lazy" /></div></figure>
+        <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.hoje2" src="img/nevy/03-hoje.webp" alt="tela do dia com refeições, total de 1.179 calorias e macros." width="402" height="874" loading="lazy" /></div></figure>
         <div>
           <span class="case-num">03</span>
-          <h3>o dia em uma tela só.</h3>
-          <p>a tela principal mostra o que foi comido, o total de calorias e os macros, sem precisar abrir nada. As refeições aparecem escritas do jeito que a pessoa falaria (“duas maçãs”), e a câmera fica no centro, perto do polegar.</p>
+          <h3 data-i18n="d3.h">o dia em uma tela só.</h3>
+          <p data-i18n="d3.p">a tela principal mostra o que foi comido, o total de calorias e os macros, sem precisar abrir nada. As refeições aparecem escritas do jeito que a pessoa falaria (“duas maçãs”), e a câmera fica no centro, perto do polegar.</p>
         </div>
       </section>
 
       <section class="case-decision case-decision-flip wrap">
         <div class="case-pair">
-          <figure class="phone"><div class="phone-screen"><img src="img/nevy/06-historico.webp" alt="histórico com calendário e atalhos para registrar corrida e treino." width="402" height="874" loading="lazy" /></div></figure>
-          <figure class="phone"><div class="phone-screen"><img src="img/nevy/07-treino.webp" alt="treino em andamento com exercícios marcados como concluído, pulado e não iniciado." width="402" height="874" loading="lazy" /></div></figure>
+          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.historico" src="img/nevy/06-historico.webp" alt="histórico com calendário e atalhos para registrar corrida e treino." width="402" height="874" loading="lazy" /></div></figure>
+          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.treino" src="img/nevy/07-treino.webp" alt="treino em andamento com exercícios marcados como concluído, pulado e não iniciado." width="402" height="874" loading="lazy" /></div></figure>
         </div>
         <div>
           <span class="case-num">04</span>
-          <h3>comida e treino no mesmo histórico.</h3>
-          <p>uma barra troca entre dieta e treino, e o calendário mostra os dois juntos. No treino, cada exercício tem uma cor e também um rótulo (concluído, pulado, não iniciado), assim dá para entender o estado sem depender só da cor.</p>
+          <h3 data-i18n="d4.h">comida e treino no mesmo histórico.</h3>
+          <p data-i18n="d4.p">uma barra troca entre dieta e treino, e o calendário mostra os dois juntos. No treino, cada exercício tem uma cor e também um rótulo (concluído, pulado, não iniciado), assim dá para entender o estado sem depender só da cor.</p>
         </div>
       </section>
 
       <section class="case-section wrap">
-        <p class="eyebrow">linguagem visual</p>
+        <p class="eyebrow" data-i18n="case.visual.e">linguagem visual</p>
         <div class="case-copy">
-          <h2>vidro só onde ajuda.</h2>
-          <p>o app usa superfícies translúcidas no estilo Liquid Glass da Apple nos botões e cards, mas o que organiza a tela é o texto e o contraste. A fonte monoespaçada e as minúsculas deixam o tom mais próximo de uma conversa, e as animações aparecem só nas transições.</p>
+          <h2 data-i18n="case.visual.h">vidro só onde ajuda.</h2>
+          <p data-i18n="case.visual.p">o app usa superfícies translúcidas no estilo Liquid Glass da Apple nos botões e cards, mas o que organiza a tela é o texto e o contraste. A fonte monoespaçada e as minúsculas deixam o tom mais próximo de uma conversa, e as animações aparecem só nas transições.</p>
         </div>
       </section>
 
       <section class="case-section wrap">
-        <p class="eyebrow">próximos passos</p>
+        <p class="eyebrow" data-i18n="case.next.e">próximos passos</p>
         <div class="case-copy">
-          <h2>o caminho até a primeira versão.</h2>
+          <h2 data-i18n="case.next.h">o caminho até a primeira versão.</h2>
         </div>
         <ol class="case-timeline">
-          <li><b>definição</b><span>escopo, revisão do Figma e arquitetura</span></li>
-          <li><b>fundação</b><span>projeto em SwiftUI, contas, design system e onboarding</span></li>
-          <li><b>alimentação</b><span>tela do dia, câmera, análise, edição e histórico</span></li>
-          <li><b>atividade</b><span>treino, corrida e integração com o Saúde do iPhone</span></li>
-          <li><b>constância</b><span>sequência de dias, progresso e relatórios</span></li>
-          <li><b>lançamento</b><span>testes, acessibilidade, desempenho e App Store</span></li>
+          <li><b data-i18n="t1.b">definição</b><span data-i18n="t1.s">escopo, revisão do Figma e arquitetura</span></li>
+          <li><b data-i18n="t2.b">fundação</b><span data-i18n="t2.s">projeto em SwiftUI, contas, design system e onboarding</span></li>
+          <li><b data-i18n="t3.b">alimentação</b><span data-i18n="t3.s">tela do dia, câmera, análise, edição e histórico</span></li>
+          <li><b data-i18n="t4.b">atividade</b><span data-i18n="t4.s">treino, corrida e integração com o Saúde do iPhone</span></li>
+          <li><b data-i18n="t5.b">constância</b><span data-i18n="t5.s">sequência de dias, progresso e relatórios</span></li>
+          <li><b data-i18n="t6.b">lançamento</b><span data-i18n="t6.s">testes, acessibilidade, desempenho e App Store</span></li>
         </ol>
       </section>
 
       <section class="case-next wrap">
-        <p class="eyebrow">quer acompanhar?</p>
-        <a href="index.html#contato">vamos conversar<span>.</span></a>
+        <p class="eyebrow" data-i18n="case.follow.e">quer acompanhar?</p>
+        <a href="index.html#contato" data-i18n="case.follow.cta">vamos conversar<span>.</span></a>
       </section>
     </main>
 
     <footer class="wrap">
       <span>© 2026 Tiago Rosario</span>
-      <span>feito em minúsculas</span>
+      <span data-i18n="footer.made">feito em minúsculas</span>
       <a href="https://github.com/tithr" target="_blank" rel="noreferrer">github ↗</a>
     </footer>
+    <script src="i18n.js?v=1"></script>
   </body>
 </html>
