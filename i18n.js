@@ -1,15 +1,6 @@
-/* tr portfolio i18n
-   - portuguese is the source: it is the text written in the html.
-   - this file only holds the english versions, keyed by data-i18n.
-   - <el data-i18n="key">            -> innerHTML
-   - <el data-i18n-attr="alt:key">    -> attribute (several: "alt:a;aria-label:b")
-   - the chosen language is remembered across pages (localStorage),
-     otherwise it follows the browser language.
-   - run `node tools/check-i18n.js` to find text without a key or a translation. */
 (() => {
   const EN = {
-    /* shared */
-    'meta.index': 'portfolio of a student who loves design and nevy.',
+        'meta.index': 'portfolio of a student who loves design and nevy.',
     'meta.nevy': 'nevy: an iOS app in progress to log meals with a photo. Case by Tiago Rosario.',
     'title.nevy': 'nevy · tr portfolio',
     'aria.home': 'back to the top',
@@ -21,8 +12,7 @@
     'nav.status': 'available to create',
     'footer.made': 'made in lowercase',
 
-    /* index */
-    'hero.eyebrow': 'student',
+        'hero.eyebrow': 'student',
     'hero.title': 'curious ideas,<br /><em>made to be felt.</em>',
     'hero.text': 'i am a student who loves design. I turn concepts, references and conversations into experiences that feel meaningful.',
     'hero.cta': 'view idea <span>↓</span>',
@@ -50,8 +40,7 @@
     'contact.eyebrow': '04 / shall we talk?',
     'contact.cta': 'say hello<span>.</span>',
 
-    /* nevy case */
-    'case.back': '← work',
+        'case.back': '← work',
     'case.eyebrow': '01 / case',
     'case.lead': 'an iOS app in progress to log what you eat with a photo, and see food and workouts in the same place.',
     'case.role.t': 'role', 'case.role.d': 'product, ui/ux and development',
@@ -105,7 +94,6 @@
     set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
   };
 
-  // cache the portuguese source once, before anything is swapped
   const textEls = [...document.querySelectorAll('[data-i18n]')];
   textEls.forEach((el) => { el._pt = el.tagName === 'TITLE' ? el.textContent : el.innerHTML; });
   const attrEls = [...document.querySelectorAll('[data-i18n-attr]')].map((el) => ({
