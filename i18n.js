@@ -88,18 +88,18 @@
     'case.follow.e': 'want to follow along?',
     'case.follow.cta': 'let’s talk<span>.</span>',
 
-        'meta.pc': 'first commit: a five-step guide to publishing your first idea on GitHub. By Tiago Rosario.',
+        'meta.pc': 'first commit: five steps to get your first idea on GitHub. by Tiago Rosario.',
     'title.pc': 'first commit · tr portfolio',
     'pc.eyebrow': '02 / project',
     'pc.h1': 'first commit<span>.</span>',
-    'pc.lead': 'a five-step guide to publishing your first idea on GitHub without fearing the button. The page is the project: scroll and follow along.',
+    'pc.lead': 'five steps to get your first idea on GitHub. the page is the project — scroll and follow along.',
     'pc.role.d': 'idea, writing, design and code',
     'pc.kind.t': 'type', 'pc.kind.d': 'interactive page',
     'pc.tools.d': 'html, css and javascript',
     'pc.status.d': 'live, 2026',
     'pc.why.e': 'why',
     'pc.why.h': 'the first commit stops more people than the code does.',
-    'pc.why.p': 'almost every git tutorial assumes you already know what a repository, a remote and a branch are. Beginners do not get stuck on the logic: they get stuck on the fear of publishing something wrong in a public place. This guide assumes no prior knowledge and ends with a working link.',
+    'pc.why.p': 'every git tutorial assumes you already know what a repository, a remote and a branch are. beginners do not get stuck on the logic: they get stuck on the fear of doing something wrong in a public place. i made this guide starting from zero. by the end you have a working link.',
     'pc.guide.e': 'the guide',
     'pc.guide.h': 'five steps.',
     'pc.aria.progress': 'guide progress',
@@ -111,7 +111,7 @@
     'pc.s1.n': 'to check that it worked, the command below has to answer with a version number.',
     'pc.s1.c': 'git installed and account created',
     'pc.s2.t': 'say who you are',
-    'pc.s2.p': 'git signs every change with a name and an email. You do this once, on your machine. Use the same email as your GitHub account so your commits show up on your profile.',
+    'pc.s2.p': 'git signs every change with a name and an email. you do this once. use the same email as your GitHub account so your commits show up on your profile.',
     'pc.s2.c': 'name and email configured',
     'pc.s3.t': 'turn your folder into a repository',
     'pc.s3.p': 'open the terminal inside your project folder. The first command creates the repository, the second marks every file and the third saves that state with a message. That is all a commit is: a photo of the project with a note explaining it.',
@@ -131,7 +131,7 @@
     'pc.finish': 'done. Your first idea is public, address and all.',
     'pc.learn.e': 'what i learned',
     'pc.learn.h': 'what i would do differently.',
-    'pc.learn.p': 'the guide started as running text and it did not work: a beginner gets lost in the middle of a long paragraph. Breaking it into steps that open one at a time, each with a box to tick, changed the whole reading. In the next version I want to fix step 4, still the most fragile one, because it depends on a GitHub screen that changes every so often.'
+    'pc.learn.p': 'i started writing everything as running text and it did not work. beginners get lost in the middle of a long paragraph. breaking it into steps that open one at a time, each with a box to tick, changed everything. in the next version i want to rethink step 4 — it depends on a GitHub screen that changes every so often.'
   };
 
   const KEY = 'tr-lang';
