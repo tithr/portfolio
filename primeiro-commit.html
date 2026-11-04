@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" data-i18n-attr="content:meta.pc" content="primeiro commit: um guia de cinco passos para publicar sua primeira ideia no GitHub. Por tiago rosario." />
+    <title data-i18n="title.pc">primeiro commit · tr portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <meta name="theme-color" content="#07090e" />
+    <link rel="stylesheet" href="styles.css?v=29" />
+  </head>
+  <body class="case-page">
+    <header class="nav wrap">
+      <a class="mark" href="index.html" aria-label="voltar ao início" data-i18n-attr="aria-label:aria.home">tr<span>.</span></a>
+      <nav aria-label="navegação principal" data-i18n-attr="aria-label:aria.nav">
+        <a href="index.html#sobre" data-i18n="nav.about">sobre</a>
+        <a href="index.html#trabalhos" data-i18n="nav.work">trabalhos</a>
+        <a href="index.html#contato" data-i18n="nav.contact">contato</a>
+      </nav>
+      <a class="status" href="index.html#contato" data-i18n="nav.status">disponível para criar</a>
+    </header>
+    <div class="lang-switch" role="group" aria-label="idioma" data-i18n-attr="aria-label:aria.lang"><button type="button" data-lang="pt" aria-pressed="true">por</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">en</button></div>
+
+    <main>
+      <section class="case-hero wrap">
+        <a class="case-back" href="index.html#trabalhos" data-i18n="case.back">← trabalhos</a>
+        <p class="eyebrow" data-i18n="pc.eyebrow">02 / projeto</p>
+        <h1 data-i18n="pc.h1">primeiro commit<span>.</span></h1>
+        <p class="case-lead" data-i18n="pc.lead">um guia de cinco passos para publicar sua primeira ideia no GitHub sem medo de apertar o botão. A página é o projeto: role e siga.</p>
+        <dl class="case-meta">
+          <div><dt data-i18n="case.role.t">papel</dt><dd data-i18n="pc.role.d">ideia, texto, design e código</dd></div>
+          <div><dt data-i18n="pc.kind.t">tipo</dt><dd data-i18n="pc.kind.d">página interativa</dd></div>
+          <div><dt data-i18n="case.tools.t">ferramentas</dt><dd data-i18n="pc.tools.d">html, css e javascript</dd></div>
+          <div><dt data-i18n="case.status.t">status</dt><dd data-i18n="pc.status.d">no ar, 2026</dd></div>
+        </dl>
+      </section>
+
+      <section class="case-section wrap">
+        <p class="eyebrow" data-i18n="pc.why.e">por quê</p>
+        <div class="case-copy">
+          <h2 data-i18n="pc.why.h">o primeiro commit trava mais gente do que o código.</h2>
+          <p data-i18n="pc.why.p">quase todo tutorial de git começa supondo que você já sabe o que é um repositório, um remote e uma branch. Quem está começando não trava na lógica: trava no medo de publicar errado em um lugar público. Este guia assume zero conhecimento prévio e termina com um link funcionando.</p>
+        </div>
+      </section>
+
+      <section class="guide wrap" id="guia">
+        <div class="guide-head">
+          <p class="eyebrow" data-i18n="pc.guide.e">o guia</p>
+          <h2 data-i18n="pc.guide.h">cinco passos.</h2>
+        </div>
+
+        <div class="guide-bar" role="group" aria-label="progresso do guia" data-i18n-attr="aria-label:pc.aria.progress">
+          <div class="guide-track"><span class="guide-fill" id="fill"></span></div>
+          <p class="guide-count"><b id="done" data-i18n-skip>0</b><span data-i18n="pc.guide.of"> de 5 concluídos</span></p>
+          <button type="button" class="guide-reset" id="reset" data-i18n="pc.guide.reset">recomeçar</button>
+        </div>
+
+        <ol class="steps" id="steps">
+          <li class="step" data-step="1">
+            <button type="button" class="step-head" aria-expanded="false">
+              <span class="step-num">01</span>
+              <span class="step-title" data-i18n="pc.s1.t">criar a conta e instalar o git</span>
+              <span class="step-chevron" aria-hidden="true">↓</span>
+            </button>
+            <div class="step-body">
+              <p data-i18n="pc.s1.p">crie uma conta em github.com. Depois instale o git no seu computador: no macOS, basta abrir o Terminal e digitar <code>git --version</code>, que o sistema oferece a instalação. No Windows, baixe em git-scm.com.</p>
+              <p class="step-note" data-i18n="pc.s1.n">para conferir se deu certo, o comando abaixo precisa responder com um número de versão.</p>
+              <div class="code" data-i18n-skip><code>git --version</code><button type="button" class="copy" data-i18n="pc.copy">copiar</button></div>
+              <label class="step-check"><input type="checkbox" /><span data-i18n="pc.s1.c">git instalado e conta criada</span></label>
+            </div>
+          </li>
+
+          <li class="step" data-step="2">
+            <button type="button" class="step-head" aria-expanded="false">
+              <span class="step-num">02</span>
+              <span class="step-title" data-i18n="pc.s2.t">dizer quem você é</span>
+              <span class="step-chevron" aria-hidden="true">↓</span>
+            </button>
+            <div class="step-body">
+              <p data-i18n="pc.s2.p">o git assina cada mudança com um nome e um e-mail. Isso é feito uma vez só, na sua máquina. Use o mesmo e-mail da conta do GitHub para que os commits apareçam no seu perfil.</p>
+              <div class="code" data-i18n-skip><code>git config --global user.name "seu nome"
+git config --global user.email "seu@email.com"</code><button type="button" class="copy" data-i18n="pc.copy">copiar</button></div>
+              <label class="step-check"><input type="checkbox" /><span data-i18n="pc.s2.c">nome e e-mail configurados</span></label>
+            </div>
+          </li>
+
+          <li class="step" data-step="3">
+            <button type="button" class="step-head" aria-expanded="false">
+              <span class="step-num">03</span>
+              <span class="step-title" data-i18n="pc.s3.t">transformar sua pasta em um repositório</span>
+              <span class="step-chevron" aria-hidden="true">↓</span>
+            </button>
+            <div class="step-body">
+              <p data-i18n="pc.s3.p">abra o terminal dentro da pasta do seu projeto. O primeiro comando cria o repositório, o segundo marca todos os arquivos e o terceiro salva esse estado com uma mensagem. Commit é só isso: uma foto do projeto com um bilhete explicando.</p>
+              <div class="code" data-i18n-skip><code>git init
+git add .
+git commit -m "primeiro commit"</code><button type="button" class="copy" data-i18n="pc.copy">copiar</button></div>
+              <p class="step-note" data-i18n="pc.s3.n">nada disso vai para a internet ainda. Até aqui tudo acontece só no seu computador, e é por isso que não há como estragar nada.</p>
+              <label class="step-check"><input type="checkbox" /><span data-i18n="pc.s3.c">primeiro commit feito</span></label>
+            </div>
+          </li>
+
+          <li class="step" data-step="4">
+            <button type="button" class="step-head" aria-expanded="false">
+              <span class="step-num">04</span>
+              <span class="step-title" data-i18n="pc.s4.t">conectar com o github e enviar</span>
+              <span class="step-chevron" aria-hidden="true">↓</span>
+            </button>
+            <div class="step-body">
+              <p data-i18n="pc.s4.p">no GitHub, clique em New repository, dê um nome e crie sem marcar nenhuma opção extra. A tela seguinte mostra um endereço terminado em .git. Troque os dois campos abaixo pelos seus e copie os comandos prontos.</p>
+              <div class="fields">
+                <label><span data-i18n="pc.s4.user">seu usuário</span><input type="text" id="user" placeholder="tithr" autocomplete="off" spellcheck="false" /></label>
+                <label><span data-i18n="pc.s4.repo">nome do repositório</span><input type="text" id="repo" placeholder="meu-projeto" autocomplete="off" spellcheck="false" /></label>
+              </div>
+              <div class="code" data-i18n-skip><code id="remote">git remote add origin https://github.com/tithr/meu-projeto.git
+git branch -M main
+git push -u origin main</code><button type="button" class="copy" data-i18n="pc.copy">copiar</button></div>
+              <p class="step-note" data-i18n="pc.s4.n">na primeira vez o git vai pedir login. Use a janela do navegador que abre, ou um token em vez da senha: o GitHub não aceita mais a senha da conta no terminal.</p>
+              <label class="step-check"><input type="checkbox" /><span data-i18n="pc.s4.c">código no ar no github</span></label>
+            </div>
+          </li>
+
+          <li class="step" data-step="5">
+            <button type="button" class="step-head" aria-expanded="false">
+              <span class="step-num">05</span>
+              <span class="step-title" data-i18n="pc.s5.t">publicar como site</span>
+              <span class="step-chevron" aria-hidden="true">↓</span>
+            </button>
+            <div class="step-body">
+              <p data-i18n="pc.s5.p">se o seu projeto tem um index.html, ele pode virar um site em um minuto. No repositório, vá em Settings, depois Pages, e em Branch escolha main e a pasta raiz. Salve e espere um pouco.</p>
+              <p class="step-note" data-i18n="pc.s5.n">o endereço do seu site fica assim:</p>
+              <div class="code" data-i18n-skip><code id="pages">https://tithr.github.io/meu-projeto/</code><button type="button" class="copy" data-i18n="pc.copy">copiar</button></div>
+              <p data-i18n="pc.s5.p2">a partir daqui o ciclo é sempre o mesmo: mudar um arquivo, <code>git add .</code>, <code>git commit -m "o que mudou"</code> e <code>git push</code>. É o mesmo comando que publicou este guia.</p>
+              <label class="step-check"><input type="checkbox" /><span data-i18n="pc.s5.c">site publicado</span></label>
+            </div>
+          </li>
+        </ol>
+
+        <p class="guide-done" id="finish" hidden data-i18n="pc.finish">pronto. Sua primeira ideia está pública, com endereço e tudo.</p>
+      </section>
+
+      <section class="case-section wrap">
+        <p class="eyebrow" data-i18n="pc.learn.e">aprendizado</p>
+        <div class="case-copy">
+          <h2 data-i18n="pc.learn.h">o que eu faria diferente.</h2>
+          <p data-i18n="pc.learn.p">o guia começou como um texto corrido e não funcionava: quem está começando se perde no meio de um parágrafo longo. Quebrar em passos que abrem um por vez, com uma caixa para marcar, mudou a leitura inteira. Na próxima versão quero resolver o passo 4, que ainda é o mais frágil, porque depende de uma tela do GitHub que muda de tempos em tempos.</p>
+        </div>
+      </section>
+
+      <section class="case-next wrap">
+        <p class="eyebrow" data-i18n="case.follow.e">quer acompanhar?</p>
+        <a href="index.html#contato" data-i18n="case.follow.cta">vamos conversar<span>.</span></a>
+      </section>
+    </main>
+
+    <footer class="wrap">
+      <span>© 2026 tiago rosario</span>
+      <span data-i18n="footer.made">feito em minúsculas</span>
+      <a href="https://github.com/tithr" target="_blank" rel="noreferrer">github ↗</a>
+    </footer>
+    <script src="i18n.js?v=2"></script>
+    <script>
+      (() => {
+        const steps = [...document.querySelectorAll('.step')];
+        const fill = document.getElementById('fill');
+        const doneEl = document.getElementById('done');
+        const finish = document.getElementById('finish');
+        const KEY = 'tr-pc-steps';
+
+        const read = () => { try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch (e) { return []; } };
+        const save = (v) => { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch (e) {} };
+
+        const open = (step, state) => {
+          const head = step.querySelector('.step-head');
+          head.setAttribute('aria-expanded', String(state));
+          step.classList.toggle('is-open', state);
+        };
+
+        const refresh = () => {
+          const marks = steps.filter((s) => s.querySelector('.step-check input').checked);
+          const n = marks.length;
+          doneEl.textContent = String(n);
+          fill.style.width = (n / steps.length * 100) + '%';
+          finish.hidden = n < steps.length;
+          steps.forEach((s) => s.classList.toggle('is-done', s.querySelector('.step-check input').checked));
+          save(steps.filter((s) => s.querySelector('.step-check input').checked).map((s) => s.dataset.step));
+        };
+
+        const saved = read();
+        steps.forEach((step, i) => {
+          const head = step.querySelector('.step-head');
+          const box = step.querySelector('.step-check input');
+          box.checked = saved.includes(step.dataset.step);
+          head.addEventListener('click', () => open(step, !step.classList.contains('is-open')));
+          box.addEventListener('change', () => {
+            refresh();
+            if (box.checked && steps[i + 1]) { open(step, false); open(steps[i + 1], true); }
+          });
+        });
+        open(steps[0], true);
+        refresh();
+
+        document.getElementById('reset').addEventListener('click', () => {
+          steps.forEach((s) => { s.querySelector('.step-check input').checked = false; open(s, false); });
+          open(steps[0], true);
+          refresh();
+        });
+
+        const user = document.getElementById('user');
+        const repo = document.getElementById('repo');
+        const remote = document.getElementById('remote');
+        const pages = document.getElementById('pages');
+        const clean = (v, fallback) => (v.trim().replace(/[^a-zA-Z0-9._-]/g, '') || fallback);
+        const sync = () => {
+          const u = clean(user.value, 'tithr');
+          const r = clean(repo.value, 'meu-projeto');
+          remote.textContent = `git remote add origin https://github.com/${u}/${r}.git\ngit branch -M main\ngit push -u origin main`;
+          pages.textContent = `https://${u.toLowerCase()}.github.io/${r}/`;
+        };
+        user.addEventListener('input', sync);
+        repo.addEventListener('input', sync);
+
+        document.querySelectorAll('.copy').forEach((btn) => {
+          btn.addEventListener('click', async () => {
+            const text = btn.parentElement.querySelector('code').textContent;
+            const label = btn.textContent;
+            try { await navigator.clipboard.writeText(text); btn.textContent = 'copiado'; }
+            catch (e) { btn.textContent = 'copie à mão'; }
+            setTimeout(() => { btn.textContent = label; }, 1600);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
