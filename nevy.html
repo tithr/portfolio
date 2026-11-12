@@ -86,8 +86,8 @@
         </div>
         <div>
           <span class="case-num">02</span>
-          <h3 data-i18n="d2.h">a ia sugere, a pessoa confirma.</h3>
-          <p data-i18n="d2.p">a foto gera uma estimativa. O resultado mostra os macros, cada alimento com a porção aproximada (“~100g”) e um texto explicando como o prato foi identificado. Dá para editar tudo antes de salvar, e nada entra no histórico até a pessoa tocar em registrar. Se a análise falhar, ainda dá para registrar à mão.</p>
+          <h3 data-i18n="d2.h">o reconhecimento sugere, a pessoa confirma.</h3>
+          <p data-i18n="d2.p">a foto gera uma estimativa do prato. Cada alimento aparece com a porção aproximada (“~100g”) e uma frase curta sobre a leitura. Dá para editar tudo antes de salvar, e nada entra no histórico até a pessoa tocar em registrar. Se a leitura errar, dá para registrar à mão.</p>
         </div>
       </section>
 
@@ -115,26 +115,26 @@
       <section class="case-section wrap">
         <p class="eyebrow" data-i18n="case.build.e">por baixo do vidro</p>
         <div class="case-copy">
-          <h2 data-i18n="case.build.h">quatro decisões de código.</h2>
-          <p data-i18n="case.build.p">o app já roda no simulador do iPhone, e algumas escolhas só aparecem quando se olha o código.</p>
+          <h2 data-i18n="case.build.h">três decisões de código.</h2>
+          <p data-i18n="case.build.p">o app já roda no simulador do iPhone. Estas escolhas só aparecem quando se lê o código.</p>
         </div>
       </section>
 
       <section class="case-notes wrap">
         <article>
           <span class="case-num">05</span>
-          <h3 data-i18n="d5.h">a foto fica no aparelho.</h3>
-          <p data-i18n="d5.p">a análise do prato roda no próprio iPhone, com o framework Vision da Apple. Os rótulos que ele devolve são ligados a uma tabela local de alimentos, cada um com a porção típica. Se a foto for a tabela nutricional de uma embalagem, o app lê o texto e usa os valores impressos. Quando não reconhece nada, ele diz isso em vez de chutar um prato. Hoje, nenhuma foto sai do aparelho.</p>
+          <h3 data-i18n="d5.h">a foto vira alimentos com valores.</h3>
+          <p data-i18n="d5.p">o reconhecimento identifica os alimentos do prato e liga cada um a uma base de dados. Essa base vem de dois parceiros, um com alimentos nacionais e outro com alimentos internacionais. Para rótulos e produtos industrializados, os valores também vêm dos parceiros, e não de uma estimativa. Quando a foto não tem nada reconhecível, o app avisa em vez de chutar um prato.</p>
         </article>
         <article>
           <span class="case-num">06</span>
-          <h3 data-i18n="d6.h">uma tela que serve para todos os iPhones.</h3>
-          <p data-i18n="d6.p">as telas foram desenhadas em 402 × 874, a medida do iPhone 17 Pro, e tudo escala pela largura do aparelho. No iPhone SE, que é mais baixo, o conteúdo sobe um pouco e só depois a escala diminui. O teste no SE mostrou um topo apertado, e o ajuste entrou no sistema de layout que todas as telas usam. O vidro segue o Figma, mas a área de toque tem pelo menos 44 pt.</p>
+          <h3 data-i18n="d6.h">adaptável sem perder o layout.</h3>
+          <p data-i18n="d6.p">as telas foram desenhadas no tamanho do iPhone 17 Pro, 402 × 874, e todo o resto é ajuste. O conteúdo acompanha a largura do aparelho. Em telas mais baixas, como a do iPhone SE, o conteúdo de cima sobe antes de a escala diminuir, e os botões ficam presos às bordas seguras. Os alvos de toque têm pelo menos 44 pt. Um teste no SE mostrou o topo apertado, e a correção entrou no layout que todas as telas usam.</p>
         </article>
         <article>
           <span class="case-num">07</span>
           <h3 data-i18n="d7.h">a meta nunca fica abaixo da taxa basal.</h3>
-          <p data-i18n="d7.p">a meta de calorias usa a fórmula de Mifflin-St Jeor e, mesmo no objetivo de perder peso, não desce da taxa metabólica basal. Os comentários do app seguem a mesma regra de tom: nunca sugerem comer menos e nunca julgam. Quem prefere não ver números pode ligar um modo que acompanha o dia só por indicadores.</p>
+          <p data-i18n="d7.p">a meta usa a fórmula de Mifflin-St Jeor. Mesmo no objetivo de perder peso, ela não desce abaixo da taxa metabólica basal, o mínimo que o corpo gasta em repouso. Os comentários seguem a mesma regra: não sugerem comer menos e não julgam. Quem prefere não ver números pode ativar um modo que mostra o dia só com indicadores.</p>
         </article>
       </section>
 
@@ -150,15 +150,15 @@ let adjusted = max(daily * profile.goal.factor, basal)</code></pre>
         <div>
           <span class="case-num">08</span>
           <h3 data-i18n="d8.h">de onde vem cada número.</h3>
-          <p data-i18n="d8.p">cada caloria registrada diz se é uma estimativa do nevy ou se foi informada pela pessoa. As referências nutricionais vêm de bancos de domínio público, como a TACO, da Unicamp, e o USDA. As imagens dos exercícios vêm do free-exercise-db, e os termos de uso e a política de privacidade ficam dentro do app, em linguagem comum.</p>
+          <p data-i18n="d8.p">toda caloria registrada mostra a origem: estimativa do nevy ou valor informado pela pessoa. Os dados dos alimentos vêm dos dois parceiros. Os termos de uso e a política de privacidade ficam dentro do app, em linguagem comum.</p>
         </div>
       </section>
 
       <section class="case-section wrap">
         <p class="eyebrow" data-i18n="case.visual.e">linguagem visual</p>
         <div class="case-copy">
-          <h2 data-i18n="case.visual.h">vidro só onde ajuda.</h2>
-          <p data-i18n="case.visual.p">o app usa superfícies translúcidas no estilo Liquid Glass da Apple nos botões e cards, mas o que organiza a tela é o texto e o contraste. A fonte monoespaçada e as minúsculas deixam o tom mais próximo de uma conversa, e as animações aparecem só nas transições.</p>
+          <h2 data-i18n="case.visual.h">o vidro aparece onde ajuda.</h2>
+          <p data-i18n="case.visual.p">botões e cards usam vidro no estilo Liquid Glass. O resto da tela fica com texto e contraste. A fonte monoespaçada e as letras minúsculas deixam o app com cara de conversa. As animações aparecem só quando algo muda de tela.</p>
         </div>
       </section>
 
@@ -170,7 +170,7 @@ let adjusted = max(daily * profile.goal.factor, basal)</code></pre>
         <ol class="case-timeline">
           <li><b data-i18n="t1.b">definição</b><span data-i18n="t1.s">escopo, revisão do Figma e arquitetura</span><i data-i18n="st.done">feito</i></li>
           <li><b data-i18n="t2.b">fundação</b><span data-i18n="t2.s">projeto em SwiftUI, design system, onboarding e configurações</span><i data-i18n="st.done">feito</i></li>
-          <li><b data-i18n="t3.b">alimentação</b><span data-i18n="t3.s">tela do dia, câmera, análise no aparelho, edição e histórico</span><i data-i18n="st.test">em teste</i></li>
+          <li><b data-i18n="t3.b">alimentação</b><span data-i18n="t3.s">tela do dia, câmera, reconhecimento dos alimentos, edição e histórico</span><i data-i18n="st.test">em teste</i></li>
           <li><b data-i18n="t4.b">atividade</b><span data-i18n="t4.s">treino com demonstração dos exercícios, corrida e integração com o Saúde do iPhone</span><i data-i18n="st.doing">em andamento</i></li>
           <li><b data-i18n="t5.b">constância</b><span data-i18n="t5.s">sequência de dias, progresso e relatórios</span><i data-i18n="st.doing">em andamento</i></li>
           <li><b data-i18n="t6.b">lançamento</b><span data-i18n="t6.s">testes, acessibilidade, desempenho e App Store</span><i data-i18n="st.next">próximo</i></li>
