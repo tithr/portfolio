@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <meta name="theme-color" content="#07090e" />
-    <link rel="stylesheet" href="styles.css?v=28" />
+    <link rel="stylesheet" href="styles.css?v=31" />
   </head>
   <body class="case-page">
     <header class="nav wrap">
@@ -33,7 +33,7 @@
         <dl class="case-meta">
           <div><dt data-i18n="case.role.t">papel</dt><dd data-i18n="case.role.d">produto, ui/ux e desenvolvimento</dd></div>
           <div><dt data-i18n="case.platform.t">plataforma</dt><dd data-i18n="case.platform.d">iOS, SwiftUI</dd></div>
-          <div><dt data-i18n="case.tools.t">ferramentas</dt><dd data-i18n="case.tools.d">Figma</dd></div>
+          <div><dt data-i18n="case.tools.t">ferramentas</dt><dd data-i18n="case.tools.d">Figma, Xcode, SwiftUI</dd></div>
           <div><dt data-i18n="case.status.t">status</dt><dd data-i18n="case.status.d">em construção, 2026</dd></div>
         </dl>
         <div class="case-strip" aria-label="telas do nevy" data-i18n-attr="aria-label:case.strip">
@@ -66,12 +66,16 @@
         </div>
       </section>
 
-      <section class="case-decision wrap">
-        <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.objetivo" src="img/nevy/02-objetivo.webp" alt="onboarding perguntando o objetivo: perder peso, ser mais saudável ou ganhar hipertrofia." width="402" height="874" loading="lazy" /></div></figure>
+      <section class="case-decision case-decision-trio wrap">
         <div>
           <span class="case-num">01</span>
           <h3 data-i18n="d1.h">mostrar valor antes de pedir dados.</h3>
           <p data-i18n="d1.p">o onboarding começa mostrando o que o app faz e só depois pergunta o objetivo. Cada opção abre uma explicação curta, e termos como taxa metabólica basal são explicados na própria tela.</p>
+        </div>
+        <div class="case-trio">
+          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.obj1" src="img/nevy/08-objetivo-perder.webp" alt="objetivo com a opção perder peso aberta: uma meta diária um pouco abaixo do que você gasta, com foco em alimentos que dão saciedade." width="402" height="874" loading="lazy" /></div></figure>
+          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.obj2" src="img/nevy/09-objetivo-saudavel.webp" alt="objetivo com a opção ser mais saudável aberta: uma meta diária próxima do que você gasta, com foco em variedade e regularidade." width="402" height="874" loading="lazy" /></div></figure>
+          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.obj3" src="img/nevy/10-objetivo-hipertrofia.webp" alt="objetivo com a opção ganhar hipertrofia aberta: uma meta diária um pouco acima do que você gasta, com proteína para acompanhar o treino." width="402" height="874" loading="lazy" /></div></figure>
         </div>
       </section>
 
@@ -109,6 +113,48 @@
       </section>
 
       <section class="case-section wrap">
+        <p class="eyebrow" data-i18n="case.build.e">por baixo do vidro</p>
+        <div class="case-copy">
+          <h2 data-i18n="case.build.h">quatro decisões de código.</h2>
+          <p data-i18n="case.build.p">o app já roda no simulador do iPhone, e algumas escolhas só aparecem quando se olha o código.</p>
+        </div>
+      </section>
+
+      <section class="case-notes wrap">
+        <article>
+          <span class="case-num">05</span>
+          <h3 data-i18n="d5.h">a foto fica no aparelho.</h3>
+          <p data-i18n="d5.p">a análise do prato roda no próprio iPhone, com o framework Vision da Apple. Os rótulos que ele devolve são ligados a uma tabela local de alimentos, cada um com a porção típica. Se a foto for a tabela nutricional de uma embalagem, o app lê o texto e usa os valores impressos. Quando não reconhece nada, ele diz isso em vez de chutar um prato. Hoje, nenhuma foto sai do aparelho.</p>
+        </article>
+        <article>
+          <span class="case-num">06</span>
+          <h3 data-i18n="d6.h">uma tela que serve para todos os iPhones.</h3>
+          <p data-i18n="d6.p">as telas foram desenhadas em 402 × 874, a medida do iPhone 17 Pro, e tudo escala pela largura do aparelho. No iPhone SE, que é mais baixo, o conteúdo sobe um pouco e só depois a escala diminui. O teste no SE mostrou um topo apertado, e o ajuste entrou no sistema de layout que todas as telas usam. O vidro segue o Figma, mas a área de toque tem pelo menos 44 pt.</p>
+        </article>
+        <article>
+          <span class="case-num">07</span>
+          <h3 data-i18n="d7.h">a meta nunca fica abaixo da taxa basal.</h3>
+          <p data-i18n="d7.p">a meta de calorias usa a fórmula de Mifflin-St Jeor e, mesmo no objetivo de perder peso, não desce da taxa metabólica basal. Os comentários do app seguem a mesma regra de tom: nunca sugerem comer menos e nunca julgam. Quem prefere não ver números pode ligar um modo que acompanha o dia só por indicadores.</p>
+        </article>
+      </section>
+
+      <section class="case-code wrap" aria-label="trecho de NutritionCalculator.swift" data-i18n-attr="aria-label:case.code.label">
+        <pre data-i18n-skip><code>let base = 10 * profile.weightKg + 6.25 * profile.heightCm - 5 * Double(profile.age)
+
+let adjusted = max(daily * profile.goal.factor, basal)</code></pre>
+        <p data-i18n-skip>NutritionCalculator.swift</p>
+      </section>
+
+      <section class="case-decision wrap">
+        <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.termos" src="img/nevy/11-termos.webp" alt="termos de uso dentro do app, com as seções sobre Apple Saúde, uso permitido e propriedade intelectual." width="402" height="874" loading="lazy" /></div></figure>
+        <div>
+          <span class="case-num">08</span>
+          <h3 data-i18n="d8.h">de onde vem cada número.</h3>
+          <p data-i18n="d8.p">cada caloria registrada diz se é uma estimativa do nevy ou se foi informada pela pessoa. As referências nutricionais vêm de bancos de domínio público, como a TACO, da Unicamp, e o USDA. As imagens dos exercícios vêm do free-exercise-db, e os termos de uso e a política de privacidade ficam dentro do app, em linguagem comum.</p>
+        </div>
+      </section>
+
+      <section class="case-section wrap">
         <p class="eyebrow" data-i18n="case.visual.e">linguagem visual</p>
         <div class="case-copy">
           <h2 data-i18n="case.visual.h">vidro só onde ajuda.</h2>
@@ -122,12 +168,12 @@
           <h2 data-i18n="case.next.h">o caminho até a primeira versão.</h2>
         </div>
         <ol class="case-timeline">
-          <li><b data-i18n="t1.b">definição</b><span data-i18n="t1.s">escopo, revisão do Figma e arquitetura</span></li>
-          <li><b data-i18n="t2.b">fundação</b><span data-i18n="t2.s">projeto em SwiftUI, contas, design system e onboarding</span></li>
-          <li><b data-i18n="t3.b">alimentação</b><span data-i18n="t3.s">tela do dia, câmera, análise, edição e histórico</span></li>
-          <li><b data-i18n="t4.b">atividade</b><span data-i18n="t4.s">treino, corrida e integração com o Saúde do iPhone</span></li>
-          <li><b data-i18n="t5.b">constância</b><span data-i18n="t5.s">sequência de dias, progresso e relatórios</span></li>
-          <li><b data-i18n="t6.b">lançamento</b><span data-i18n="t6.s">testes, acessibilidade, desempenho e App Store</span></li>
+          <li><b data-i18n="t1.b">definição</b><span data-i18n="t1.s">escopo, revisão do Figma e arquitetura</span><i data-i18n="st.done">feito</i></li>
+          <li><b data-i18n="t2.b">fundação</b><span data-i18n="t2.s">projeto em SwiftUI, design system, onboarding e configurações</span><i data-i18n="st.done">feito</i></li>
+          <li><b data-i18n="t3.b">alimentação</b><span data-i18n="t3.s">tela do dia, câmera, análise no aparelho, edição e histórico</span><i data-i18n="st.test">em teste</i></li>
+          <li><b data-i18n="t4.b">atividade</b><span data-i18n="t4.s">treino com demonstração dos exercícios, corrida e integração com o Saúde do iPhone</span><i data-i18n="st.doing">em andamento</i></li>
+          <li><b data-i18n="t5.b">constância</b><span data-i18n="t5.s">sequência de dias, progresso e relatórios</span><i data-i18n="st.doing">em andamento</i></li>
+          <li><b data-i18n="t6.b">lançamento</b><span data-i18n="t6.s">testes, acessibilidade, desempenho e App Store</span><i data-i18n="st.next">próximo</i></li>
         </ol>
       </section>
 
@@ -143,5 +189,7 @@
       <a href="https://github.com/tithr" target="_blank" rel="noreferrer">github ↗</a>
     </footer>
     <script src="i18n.js?v=1"></script>
+    <script src="lenis.min.js"></script>
+    <script src="smooth.js?v=1"></script>
   </body>
 </html>

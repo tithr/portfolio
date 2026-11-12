@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <meta name="theme-color" content="#07090e" />
-    <link rel="stylesheet" href="styles.css?v=29" />
+    <link rel="stylesheet" href="styles.css?v=31" />
   </head>
   <body>
     <header class="nav wrap">
@@ -53,22 +53,22 @@
             <div class="project-art"><span data-i18n="p1.art">nevy:<br />comida<br />numa foto.</span><span class="phone project-shot"><span class="phone-screen"><img src="img/nevy/03-hoje.webp" alt="" width="402" height="874" loading="lazy" /></span></span><b>01</b></div>
             <div class="project-info"><span data-i18n="p1.info">app iOS · em construção</span><span>2026 ↗</span></div>
           </a>
-          <a class="project project-three" href="primeiro-commit.html">
-            <div class="project-art"><span data-i18n="p3.art">olhar,<br />testar,<br />refazer.</span><b>02</b></div>
-            <div class="project-info"><span data-i18n="p3.info">guia interativo · primeiro commit</span><span>2026 ↗</span></div>
+          <a class="project project-two" href="#contato">
+            <div class="project-art"><span data-i18n="p2.art">tudo<br />começa<br />com um<br />rabisco.</span><b>02</b></div>
+            <div class="project-info"><span data-i18n="p2.info">direção de arte</span><span>2026 ↗</span></div>
           </a>
-          <div class="project project-two is-soon" aria-hidden="false">
-            <div class="project-art"><span data-i18n="p2.art">tudo<br />começa<br />com um<br />rabisco.</span><b>03</b></div>
-            <div class="project-info"><span data-i18n="p2.info">sinais · direção de arte</span><span class="project-soon" data-i18n="soon">em breve</span></div>
-          </div>
-          <div class="project project-four is-soon">
+          <a class="project project-three" href="#contato">
+            <div class="project-art"><span data-i18n="p3.art">olhar,<br />testar,<br />refazer.</span><b>03</b></div>
+            <div class="project-info"><span data-i18n="p3.info">experimento digital</span><span>2025 ↗</span></div>
+          </a>
+          <a class="project project-four" href="#contato">
             <div class="project-art"><span data-i18n="p4.art">menos<br />ruído,<br />mais sentido.</span><b>04</b></div>
-            <div class="project-info"><span data-i18n="p4.info">ritmo · experiência mobile</span><span class="project-soon" data-i18n="soon">em breve</span></div>
-          </div>
-          <div class="project project-five is-soon">
+            <div class="project-info"><span data-i18n="p4.info">experiência mobile</span><span>2025 ↗</span></div>
+          </a>
+          <a class="project project-five" href="#contato">
             <div class="project-art"><span data-i18n="p5.art">uma ideia<br />de cada<br />vez.</span><b>05</b></div>
-            <div class="project-info"><span data-i18n="p5.info">entre linhas · diário visual</span><span class="project-soon" data-i18n="soon">em breve</span></div>
-          </div>
+            <div class="project-info"><span data-i18n="p5.info">sistema de marca</span><span>2024 ↗</span></div>
+          </a>
         </div>
       </section>
 
@@ -96,8 +96,9 @@
       <span data-i18n="footer.made">feito em minúsculas</span>
       <a href="https://github.com/tithr" target="_blank" rel="noreferrer">github ↗</a>
     </footer>
-    <script src="i18n.js?v=2"></script>
-    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+    <script src="i18n.js?v=1"></script>
+    <script src="lenis.min.js"></script>
+    <script src="smooth.js?v=1"></script>
     <script>
       const notifyVisit = () => {
         if (sessionStorage.getItem('tr-visit-notified')) return;
@@ -109,22 +110,6 @@
         sessionStorage.setItem('tr-visit-notified', '1');
       };
       notifyVisit();
-
-
-      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && window.Lenis) {
-        const lenis = new Lenis({
-          lerp: 0.075,
-          smoothWheel: true,
-          syncTouch: false,
-          wheelMultiplier: 0.8,
-          touchMultiplier: 1
-        });
-        const raf = (time) => {
-          lenis.raf(time);
-          requestAnimationFrame(raf);
-        };
-        requestAnimationFrame(raf);
-      }
 
     </script>
   </body>
