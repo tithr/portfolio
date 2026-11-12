@@ -58,6 +58,7 @@
     'alt.obj3': 'goal screen with the build muscle option open: a daily target a little above what you burn, with protein to support training.',
     'alt.termos': 'terms of use inside the app, with sections on Apple Health, permitted use and intellectual property.',
     'alt.camera2': 'camera identifying a plate.',
+    'res.log': 'log',
     'alt.resultado': 'result: plate identified, with macros, a list of estimated foods and the log button.',
     'alt.hoje2': 'today screen with meals, a total of 1,179 calories and macros.',
     'alt.historico': 'history with a calendar and shortcuts to log a run and a workout.',
