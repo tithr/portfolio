@@ -94,7 +94,7 @@
     'd7.p': 'the target uses the Mifflin-St Jeor formula. Even for the lose weight goal, it does not go below the basal metabolic rate, the least the body burns at rest. The comments follow the same rule: they never suggest eating less and never judge. People who prefer not to see numbers can turn on a mode that shows the day with indicators only.',
     'case.code.label': 'excerpt from NutritionCalculator.swift',
     'd8.h': 'where every number comes from.',
-    'd8.p': 'every logged calorie shows its source: an estimate from nevy or a value the person entered. Food data comes from the two partners. The terms of use and the privacy policy live inside the app, in plain language.',
+    'd8.p': 'every logged calorie shows its source: an estimate from nevy or a value the person entered. Food data comes from the two partners. The terms of use and the privacy policy live inside the app, in plain language. On photos, the terms say they are used only for analysis and are not stored on our servers. If a food is not identified, the image may be kept for up to 2 days so a person can catalog it. Images with nudity may be kept and analyzed and may lead to account restrictions.',
     'st.done': 'done',
     'st.test': 'in testing',
     'st.doing': 'in progress',
