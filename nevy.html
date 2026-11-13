@@ -3,16 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" data-i18n-attr="content:meta.nevy" content="nevy: um app iOS em construção para registrar refeições com uma foto. Case de tiago rosario." />
-    <title data-i18n="title.nevy">nevy · tr portfolio</title>
+    <meta name="description" data-i18n-attr="content:meta.nevy" content="nevy: um app iOS em construção para registrar refeições com uma foto. Case de Tiago Rosario." />
+    <title data-i18n="title.nevy">nevy · Tiago Rosario</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="canonical" href="https://tithr.github.io/portfolio/nevy.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Tiago Rosario" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:url" content="https://tithr.github.io/portfolio/nevy.html" />
+    <meta property="og:title" content="nevy · case de Tiago Rosario" />
+    <meta property="og:description" content="um app iOS em construção para registrar o que você come com uma foto. As decisões de design e de código por trás dele." />
+    <meta property="og:image" content="https://tithr.github.io/portfolio/img/og/nevy.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="nevy. Três telas do app: boas-vindas, o dia com as refeições e a câmera." />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#07090e" />
-    <link rel="stylesheet" href="styles.css?v=32" />
+    <link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css?v=34" />
   </head>
   <body class="case-page">
+    <a class="skip" href="#conteudo" data-i18n="skip">pular para o conteúdo</a>
     <header class="nav wrap">
       <a class="mark" href="index.html" aria-label="voltar ao início" data-i18n-attr="aria-label:aria.home">tr<span>.</span></a>
       <nav aria-label="navegação principal" data-i18n-attr="aria-label:aria.nav">
@@ -24,7 +36,7 @@
     </header>
     <div class="lang-switch" role="group" aria-label="idioma" data-i18n-attr="aria-label:aria.lang"><button type="button" data-lang="pt" aria-pressed="true">por</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">en</button></div>
 
-    <main>
+    <main id="conteudo">
       <section class="case-hero wrap">
         <a class="case-back" href="index.html#trabalhos" data-i18n="case.back">← trabalhos</a>
         <p class="eyebrow" data-i18n="case.eyebrow">01 / case</p>
@@ -163,6 +175,14 @@ let adjusted = max(daily * profile.goal.factor, basal)</code></pre>
       </section>
 
       <section class="case-section wrap">
+        <p class="eyebrow" data-i18n="case.learn.e">o que aprendi</p>
+        <div class="case-copy">
+          <h2 data-i18n="case.learn.h">o simulador mostra o que o Figma não mostra.</h2>
+          <p data-i18n="case.learn.p">desenhar antes no Figma poupou retrabalho, mas os problemas de verdade só apareceram com o app rodando: o topo apertado no iPhone SE e telas que eu não tinha desenhado, como a foto sem nada reconhecível. Agora eu levo a tela para o simulador mais cedo, antes de deixá-la perfeita.</p>
+        </div>
+      </section>
+
+      <section class="case-section wrap">
         <p class="eyebrow" data-i18n="case.next.e">próximos passos</p>
         <div class="case-copy">
           <h2 data-i18n="case.next.h">o caminho até a primeira versão.</h2>
@@ -180,6 +200,7 @@ let adjusted = max(daily * profile.goal.factor, basal)</code></pre>
       <section class="case-next wrap">
         <p class="eyebrow" data-i18n="case.follow.e">quer acompanhar?</p>
         <a href="index.html#contato" data-i18n="case.follow.cta">vamos conversar<span>.</span></a>
+        <a class="case-more" href="primeiro-commit.html" data-i18n="case.more.pc">próximo projeto: <b>primeiro commit</b> →</a>
       </section>
     </main>
 
@@ -187,9 +208,10 @@ let adjusted = max(daily * profile.goal.factor, basal)</code></pre>
       <span>© 2026 Tiago Rosario</span>
       <span data-i18n="footer.made">feito em minúsculas</span>
       <a href="https://github.com/tithr" target="_blank" rel="noreferrer">github ↗</a>
+      <span class="footer-note" data-i18n="footer.privacy">sem cookies. As visitas são contadas de forma anônima.</span>
     </footer>
-    <script src="i18n.js?v=3"></script>
+    <script src="i18n.js?v=4"></script>
     <script src="lenis.min.js"></script>
-    <script src="smooth.js?v=1"></script>
+    <script src="site.js?v=1"></script>
   </body>
 </html>

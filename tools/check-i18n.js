@@ -3,7 +3,8 @@ const path = require('path');
 const fs = require('fs');
 
 const root = path.resolve(__dirname, '..');
-const pages = fs.readdirSync(root).filter((f) => f.endsWith('.html'));
+// a 404 usa caminhos absolutos (/portfolio/...) e só funciona servida pelo GitHub Pages
+const pages = fs.readdirSync(root).filter((f) => f.endsWith('.html') && f !== '404.html');
 const SAME = [/^tr\.?$/, /^por$/, /^en$/, /^\/$/, /^\d{2}$/, /^\d{4} ↗$/, /^© 2026 /, /^github ↗$/, /@/, /^\.$/, /^↓$/, /^nevy$/];
 
 (async () => {
