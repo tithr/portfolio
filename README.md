@@ -4,7 +4,7 @@ Site estático em HTML, CSS e JavaScript, publicado pelo GitHub Pages em https:/
 
 ## arquivos
 
-- `index.html`, `nevy.html`, `primeiro-commit.html`: as páginas. `404.html` usa caminhos absolutos (`/portfolio/...`) porque o GitHub Pages a serve em qualquer endereço.
+- `index.html`, `nevy.html`, `primeiro-commit.html`: as páginas. Os links não levam o `.html` (o GitHub Pages serve `nevy.html` em `/nevy`); use `nevy`, `primeiro-commit` e `./` nos links. `404.html` usa caminhos absolutos (`/portfolio/...`) porque o GitHub Pages a serve em qualquer endereço.
 - `styles.css`: um arquivo só, organizado por seção (base, vidro, home, case, iPhone, primeiro commit, animações, tablet, celular).
 - `site.js`: rolagem suave (Lenis, em `lenis.min.js`), pausa das animações fora da tela e a contagem anônima de visitas.
 - `i18n.js`: textos em inglês.
