@@ -4,6 +4,11 @@
     'meta.index': 'portfolio of Tiago Rosario, a Computer Science student who designs and codes. Featuring nevy, an iOS app in progress.',
     'meta.nevy': 'nevy: an iOS app in progress to log meals with a photo. Case by Tiago Rosario.',
     'title.nevy': 'nevy · Tiago Rosario',
+    'share.btn': 'share to a story',
+    'share.shared': 'shared.',
+    'share.saved': 'image saved and link copied. Now add it to your story.',
+    'share.fail': 'could not share right now. Link: ',
+    'share.saved2': 'image saved. Link: ',
     'skip': 'skip to content',
     'title.404': 'page not found · Tiago Rosario',
     'lost.e': '404',
@@ -200,5 +205,5 @@
   const initial = store.get() || ((navigator.language || 'pt').toLowerCase().startsWith('pt') ? 'pt' : 'en');
   apply(initial);
   document.querySelectorAll('[data-lang]').forEach((b) => b.addEventListener('click', () => { store.set(b.dataset.lang); apply(b.dataset.lang); }));
-  window.trI18n = { apply, keys: Object.keys(EN), missing };
+  window.trI18n = { apply, keys: Object.keys(EN), missing, say: (key, pt) => t(key, pt, document.documentElement.lang === 'en' ? 'en' : 'pt') };
 })();

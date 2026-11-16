@@ -157,6 +157,11 @@ h1 em {
 .contact a { display: inline-block; margin-top: 30px; font-size: clamp(72px, 12vw, 174px); font-weight: 700; letter-spacing: -.11em; line-height: .88; transition: color .25s, transform .25s; }
 .contact a:hover { color: var(--sky); transform: translateX(7px); }
 .contact-note { margin: 34px 0 0; color: var(--muted); font-size: 13px; }
+.share { display: inline-block; margin-top: 22px; padding: 12px 18px; border: 1px solid var(--line); background: rgba(255,255,255,.04); color: var(--ink); font: inherit; font-size: 14px; font-weight: 600; letter-spacing: -.01em; cursor: pointer; transition: border-color .2s, color .2s; }
+.share:hover { border-color: var(--sky); color: var(--sky); }
+.share[aria-busy="true"] { opacity: .6; cursor: progress; }
+.share-note { display: block; min-height: 20px; margin-top: 12px; color: var(--muted); font-size: 13px; }
+.case-next .share { margin-top: 28px; }
 
 footer { display: flex; flex-wrap: wrap; row-gap: 10px; justify-content: space-between; padding: 28px 0 40px; color: var(--muted); border-top: 1px solid var(--line); font-size: 13px; }
 footer a { color: var(--ink); }

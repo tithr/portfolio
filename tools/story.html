@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-br"><head><meta charset="utf-8">
+<!-- molde das imagens de story (1080 × 1920). Gerado por tools/make-story.js; não é publicado no site. -->
+<link rel="stylesheet" href="../styles.css">
+<style>
+  html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #07090e; }
+  .story { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #07090e; font-family: Manrope, sans-serif; }
+  .glow { position: absolute; inset: 0; background: radial-gradient(900px 700px at 78% 56%, rgba(41,151,255,.34), transparent 70%), radial-gradient(700px 600px at 8% 94%, rgba(140,200,255,.14), transparent 70%); }
+  .top { position: absolute; left: 84px; right: 84px; top: 250px; display: flex; justify-content: space-between; align-items: baseline; }
+  .mark { font-size: 64px; font-weight: 800; letter-spacing: -.06em; } .mark span { color: #2997ff; }
+  .tag { color: #a1a1a6; font-size: 30px; font-weight: 600; letter-spacing: -.01em; }
+  h1 { position: absolute; left: 84px; right: 84px; top: 400px; margin: 0; font-size: 108px; font-weight: 800; letter-spacing: -.065em; line-height: .96; }
+  h1 em { font-style: normal; color: #2997ff; }
+  .phone { position: absolute; width: 372px; right: 108px; bottom: 372px; transform: rotate(4deg); }
+  .phone-screen { box-shadow: 0 0 0 4px #05070b; }
+  .foot { position: absolute; left: 84px; bottom: 372px; width: 400px; }
+  .foot b { display: block; font-size: 40px; font-weight: 700; letter-spacing: -.04em; line-height: 1.1; }
+  .foot span { display: block; margin-top: 18px; color: #a1a1a6; font-size: 30px; line-height: 1.35; }
+  .url { position: absolute; left: 84px; right: 84px; bottom: 230px; font-size: 36px; font-weight: 700; letter-spacing: -.03em; color: #f5f5f7; border-top: 2px solid rgba(255,255,255,.18); padding-top: 28px; }
+  .url span { color: #2997ff; }
+  .big { position: absolute; left: 84px; right: 84px; top: 780px; font-size: 176px; font-weight: 800; letter-spacing: -.08em; line-height: .9; }
+  .big em { font-style: normal; color: #2997ff; }
+</style></head>
+<body><div class="story" id="s">
+  <div class="glow"></div>
+  <div class="top"><div class="mark">tr<span>.</span></div><div class="tag" id="tag"></div></div>
+  <h1 id="h"></h1>
+  <figure class="phone" id="ph"><div class="phone-screen"><img id="img" alt="" width="402" height="874"></div></figure>
+  <div class="foot" id="foot"></div>
+  <div class="big" id="big"></div>
+  <div class="url" id="url"></div>
+</div>
+<script>
+  const v = {
+    home: { tag: 'portfólio', h: 'ideias curiosas,<br><em>feitas para sentir.</em>', img: '../img/nevy/03-hoje.webp', foot: '<b>Tiago Rosario</b><span>estudante de Ciência da Computação que desenha e programa.</span>', url: 'tithr.github.io/portfolio' },
+    nevy: { tag: 'case', h: 'nevy:<br><em>comida numa foto.</em>', img: '../img/nevy/04-camera.webp', foot: '<b>app iOS<br>em construção</b><span>do Figma ao SwiftUI, por Tiago Rosario.</span>', url: 'tithr.github.io/portfolio/nevy' },
+    'primeiro-commit': { tag: 'guia', h: 'primeiro commit:', big: 'olhar,<br>testar,<br><em>refazer.</em>', foot: '', url: 'tithr.github.io/portfolio/primeiro-commit' },
+  }[new URLSearchParams(location.search).get('p') || 'home'];
+  document.getElementById('tag').textContent = v.tag;
+  document.getElementById('h').innerHTML = v.h;
+  document.getElementById('url').innerHTML = v.url.replace('tithr.github.io', 'tithr.github.io<span>/</span>').replace('<span>/</span>/', '<span>/</span>');
+  if (v.img) { document.getElementById('img').src = v.img; document.getElementById('foot').innerHTML = v.foot; }
+  else { document.getElementById('ph').remove(); document.getElementById('big').innerHTML = v.big; document.getElementById('foot').remove(); }
+</script></body></html>

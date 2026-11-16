@@ -10,6 +10,7 @@ Site estático em HTML, CSS e JavaScript, publicado pelo GitHub Pages em https:/
 - `i18n.js`: textos em inglês.
 - `fonts/manrope.woff2`: fonte hospedada aqui, sem Google Fonts (licença em `fonts/OFL.txt`).
 - `img/og/`: imagens de 1200 × 630 que aparecem ao compartilhar os links.
+- `img/story/`: imagens 1080 × 1920 do botão "compartilhar no story" (uma por página). Para refazer: `node tools/make-story.js`; o molde é `tools/story.html`.
 - `sitemap.xml`: para enviar ao Google Search Console.
 
 ## regras
