@@ -128,7 +128,7 @@
     'title.pc': 'first commit · Tiago Rosario',
     'pc.eyebrow': '02 / project',
     'pc.h1': 'first commit<span>.</span>',
-    'pc.lead': 'five steps to get your first idea on GitHub. the page is the project — scroll and follow along.',
+    'pc.lead': 'five steps to get your first idea on GitHub. the page is the project: scroll and follow along.',
     'pc.role.d': 'idea, writing, design and code',
     'pc.kind.t': 'type', 'pc.kind.d': 'interactive page',
     'pc.tools.d': 'html, css and javascript',
@@ -167,7 +167,7 @@
     'pc.finish': 'done. Your first idea is public, address and all.',
     'pc.learn.e': 'what i learned',
     'pc.learn.h': 'what i would do differently.',
-    'pc.learn.p': 'i started writing everything as running text and it did not work. beginners get lost in the middle of a long paragraph. breaking it into steps that open one at a time, each with a box to tick, changed everything. in the next version i want to rethink step 4 — it depends on a GitHub screen that changes every so often.'
+    'pc.learn.p': 'i started writing everything as running text and it did not work. beginners get lost in the middle of a long paragraph. breaking it into steps that open one at a time, each with a box to tick, changed everything. in the next version i want to rethink step 4, because it depends on a GitHub screen that changes every so often.'
   };
 
   const KEY = 'tr-lang';
