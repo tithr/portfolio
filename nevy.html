@@ -22,7 +22,7 @@
     <meta name="theme-color" content="#07090e" />
     <link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="img/nevy/03-hoje.webp" as="image" type="image/webp" fetchpriority="high" />
-    <link rel="stylesheet" href="styles.css?v=46" />
+    <link rel="stylesheet" href="styles.css?v=48" />
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"nevy","operatingSystem":"iOS","applicationCategory":"HealthApplication","inLanguage":"pt-BR","description":"App de iPhone para registrar comida, treino e corrida com poucos toques. Em desenvolvimento.","author":{"@type":"Person","name":"Tiago Rosario","url":"https://tithr.github.io/portfolio/"}}</script>
   </head>
   <body class="case-page lp">
@@ -120,7 +120,7 @@
         </div>
       </section>
 
-      <section class="lp-section wrap">
+      <section class="lp-section wrap" id="dia">
         <p class="eyebrow" data-i18n="lp.feat.e">no dia a dia</p>
         <h2 data-i18n="lp.feat.h">pensado para não atrapalhar.</h2>
         <ul class="lp-feats">
@@ -166,18 +166,32 @@
         <p class="lp-big" data-i18n="lp.end.cta">beta em 12/12<span>.</span></p>
         <p class="lp-note" data-i18n="lp.end.note">a partir do dia 12/12, o nevy estará disponível para a lista beta. Uma chance de testar o app antes de todo mundo.</p>
         <a class="case-more" href="nevy-case" data-i18n="lp.end.case">como o nevy foi desenhado e programado: <b>ver o case</b> →</a>
-        <button class="share" type="button" data-share="img/story/nevy.jpg" data-share-url="https://tithr.github.io/portfolio/nevy"><span data-i18n="share.btn">compartilhar no story</span></button><span class="share-note" role="status" aria-live="polite"></span>
+        <button class="share" type="button" data-share-toggle aria-expanded="false" aria-controls="share-picker"><span data-i18n="share.btn">compartilhar no story</span></button>
+        <div class="share-picker" id="share-picker" hidden>
+          <p data-i18n="share.pick">escolha o que mostrar no story</p>
+          <ul>
+          <li><button type="button" data-share="img/story/nevy.jpg" data-share-url="https://tithr.github.io/portfolio/nevy"><span data-i18n="share.s.top">início da página</span></button></li>
+          <li><button type="button" data-share="img/story/nevy-como.jpg" data-share-url="https://tithr.github.io/portfolio/nevy#como"><span data-i18n="share.s.como">como funciona</span></button></li>
+          <li><button type="button" data-share="img/story/nevy-treino.jpg" data-share-url="https://tithr.github.io/portfolio/nevy#treino"><span data-i18n="share.s.treino">treino e corrida</span></button></li>
+          <li><button type="button" data-share="img/story/nevy-corrida.jpg" data-share-url="https://tithr.github.io/portfolio/nevy#corrida"><span data-i18n="share.s.corrida">corrida</span></button></li>
+          <li><button type="button" data-share="img/story/nevy-metas.jpg" data-share-url="https://tithr.github.io/portfolio/nevy#metas"><span data-i18n="share.s.metas">metas</span></button></li>
+          <li><button type="button" data-share="img/story/nevy-dia.jpg" data-share-url="https://tithr.github.io/portfolio/nevy#dia"><span data-i18n="share.s.dia">no dia a dia</span></button></li>
+          <li><button type="button" data-share="img/story/nevy-privacidade.jpg" data-share-url="https://tithr.github.io/portfolio/nevy#privacidade"><span data-i18n="share.s.priv">privacidade</span></button></li>
+          <li><button type="button" data-share="img/story/nevy-andamento.jpg" data-share-url="https://tithr.github.io/portfolio/nevy#andamento"><span data-i18n="share.s.status">andamento</span></button></li>
+          <li><button type="button" data-share="img/story/nevy-avisar.jpg" data-share-url="https://tithr.github.io/portfolio/nevy#avisar"><span data-i18n="share.s.beta">beta em 12/12</span></button></li>
+          </ul>
+        </div><span class="share-note" role="status" aria-live="polite"></span>
       </section>
     </main>
 
     <footer class="wrap">
-      <span data-i18n="lp.foot.by">nevy, por <a href="./">Tiago Rosario</a></span>
+      <span>© 2026 tithr, Tiago Rosario</span>
       <span data-i18n="footer.made">feito em minúsculas</span>
       <a href="https://github.com/tithr" target="_blank" rel="noreferrer">github ↗</a>
       <span class="footer-note" data-i18n="footer.privacy">sem cookies. As visitas são contadas de forma anônima.</span>
     </footer>
-    <script src="i18n.js?v=14" defer></script>
+    <script src="i18n.js?v=16" defer></script>
     <script src="lenis.min.js" defer></script>
-    <script src="site.js?v=2" defer></script>
+    <script src="site.js?v=3" defer></script>
   </body>
 </html>

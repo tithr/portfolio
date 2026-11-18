@@ -18,10 +18,20 @@
     animated.forEach((el) => io.observe(el));
   }
 
+  // botão compartilhar: abre a lista de onde começa o story (início da página ou uma seção)
+  document.querySelectorAll('[data-share-toggle]').forEach((tg) => {
+    const box = document.getElementById(tg.getAttribute('aria-controls'));
+    tg.addEventListener('click', () => {
+      const open = tg.getAttribute('aria-expanded') !== 'true';
+      tg.setAttribute('aria-expanded', String(open));
+      if (box) box.hidden = !open;
+    });
+  });
+
   // compartilhar no story: abre a folha de compartilhar com a imagem; sem suporte, baixa a imagem e copia o link
   const say = (key, pt) => (window.trI18n ? window.trI18n.say(key, pt) : pt);
   document.querySelectorAll('[data-share]').forEach((btn) => {
-    const note = btn.nextElementSibling;
+    const note = document.querySelector('.share-note');
     const tell = (text) => { if (note) note.textContent = text; };
     btn.addEventListener('click', async () => {
       if (btn.getAttribute('aria-busy') === 'true') return;
