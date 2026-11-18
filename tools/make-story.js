@@ -4,7 +4,7 @@ const { chromium } = require('playwright');
 const http = require('http'); const fs = require('fs'); const path = require('path');
 const root = path.join(__dirname, '..');
 const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.webp': 'image/webp', '.woff2': 'font/woff2', '.svg': 'image/svg+xml' };
-const pages = [['home', 'index.html', 'tithr.github.io/portfolio'], ['nevy', 'nevy.html', 'tithr.github.io/portfolio/nevy'], ['primeiro-commit', 'primeiro-commit.html', 'tithr.github.io/portfolio/primeiro-commit']];
+const pages = [['home', 'index.html', 'tithr.github.io/portfolio'], ['nevy', 'nevy.html', 'tithr.github.io/portfolio/nevy'], ['nevy-case', 'nevy-case.html', 'tithr.github.io/portfolio/nevy-case'], ['primeiro-commit', 'primeiro-commit.html', 'tithr.github.io/portfolio/primeiro-commit']];
 const server = http.createServer((req, res) => {
   const file = path.join(root, decodeURIComponent(req.url.split('?')[0]));
   fs.readFile(file, (err, data) => { if (err) { res.writeHead(404); res.end(); } else { res.writeHead(200, { 'Content-Type': types[path.extname(file)] || 'application/octet-stream' }); res.end(data); } });

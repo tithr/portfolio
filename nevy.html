@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" data-i18n-attr="content:meta.nevy" content="nevy: um app iOS em construção para registrar refeições com uma foto. Case de Tiago Rosario." />
-    <title data-i18n="title.nevy">nevy · Tiago Rosario</title>
+    <meta name="description" data-i18n-attr="content:meta.lp" content="nevy é um app de iPhone para registrar comida, treino e corrida com poucos toques. Fotografe o prato e a refeição entra. Em construção: peça para ser avisado quando sair." />
+    <title data-i18n="title.lp">nevy · registre o que você come com uma foto</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="canonical" href="https://tithr.github.io/portfolio/nevy" />
-    <meta property="og:type" content="article" />
-    <meta property="og:site_name" content="Tiago Rosario" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="nevy" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:url" content="https://tithr.github.io/portfolio/nevy" />
-    <meta property="og:title" content="nevy · case de Tiago Rosario" />
-    <meta property="og:description" content="um app iOS em construção para registrar o que você come com uma foto. As decisões de design e de código por trás dele." />
+    <meta property="og:title" content="nevy · registre o que você come com uma foto" />
+    <meta property="og:description" content="app de iPhone que junta comida, treino e corrida no mesmo dia. Em construção." />
     <meta property="og:image" content="https://tithr.github.io/portfolio/img/og/nevy.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -21,172 +21,127 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#07090e" />
     <link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="styles.css?v=36" />
+    <link rel="preload" href="img/nevy/03-hoje.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="stylesheet" href="styles.css?v=37" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"nevy","operatingSystem":"iOS","applicationCategory":"HealthApplication","inLanguage":"pt-BR","description":"App de iPhone para registrar comida, treino e corrida com poucos toques. Em desenvolvimento.","author":{"@type":"Person","name":"Tiago Rosario","url":"https://tithr.github.io/portfolio/"}}</script>
   </head>
-  <body class="case-page">
+  <body class="case-page lp">
     <a class="skip" href="#conteudo" data-i18n="skip">pular para o conteúdo</a>
     <header class="nav wrap">
-      <a class="mark" href="./" aria-label="voltar ao início" data-i18n-attr="aria-label:aria.home">tr<span>.</span></a>
+      <a class="mark" href="nevy" aria-label="nevy, voltar ao topo" data-i18n-attr="aria-label:lp.aria.top">nevy<span>.</span></a>
       <nav aria-label="navegação principal" data-i18n-attr="aria-label:aria.nav">
-        <a href="./#sobre" data-i18n="nav.about">sobre</a>
-        <a href="./#trabalhos" data-i18n="nav.work">trabalhos</a>
-        <a href="./#contato" data-i18n="nav.contact">contato</a>
+        <a href="#como" data-i18n="lp.nav.how">como funciona</a>
+        <a href="#privacidade" data-i18n="lp.nav.privacy">privacidade</a>
+        <a href="#andamento" data-i18n="lp.nav.status">andamento</a>
       </nav>
-      <a class="status" href="./#contato" data-i18n="nav.status">disponível para criar</a>
+      <a class="status" href="#avisar" data-i18n="lp.nav.cta">me avise quando sair</a>
     </header>
     <div class="lang-switch" role="group" aria-label="idioma" data-i18n-attr="aria-label:aria.lang"><button type="button" data-lang="pt" aria-pressed="true">por</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">en</button></div>
 
     <main id="conteudo">
-      <section class="case-hero wrap">
-        <a class="case-back" href="./#trabalhos" data-i18n="case.back">← trabalhos</a>
-        <p class="eyebrow" data-i18n="case.eyebrow">01 / case</p>
-        <h1>nevy<span>.</span></h1>
-        <p class="case-lead" data-i18n="case.lead">um app iOS em construção para registrar o que você come com uma foto, e ver alimentação e treino no mesmo lugar.</p>
-        <dl class="case-meta">
-          <div><dt data-i18n="case.role.t">papel</dt><dd data-i18n="case.role.d">produto, ui/ux e desenvolvimento</dd></div>
-          <div><dt data-i18n="case.platform.t">plataforma</dt><dd data-i18n="case.platform.d">iOS, SwiftUI</dd></div>
-          <div><dt data-i18n="case.tools.t">ferramentas</dt><dd data-i18n="case.tools.d">Figma, Xcode, SwiftUI</dd></div>
-          <div><dt data-i18n="case.status.t">status</dt><dd data-i18n="case.status.d">em construção, 2026</dd></div>
-        </dl>
-        <div class="case-strip" aria-label="telas do nevy" data-i18n-attr="aria-label:case.strip">
-          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.ola" src="img/nevy/01-ola.webp" alt="tela de boas-vindas: olá, sou o nevy. Monitorar o que come deve ser tão fácil como tirar uma foto." width="402" height="874" /></div></figure>
-          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.hoje" src="img/nevy/03-hoje.webp" alt="tela do dia com a lista de refeições, o total de calorias, os macros e o botão de câmera no centro." width="402" height="874" /></div></figure>
-          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.camera" src="img/nevy/04-camera.webp" alt="câmera apontada para um prato com brócolis, cenoura, repolho, arroz e carne moída." width="402" height="874" /></div></figure>
+      <section class="lp-hero wrap">
+        <div class="lp-hero-copy">
+          <p class="eyebrow" data-i18n="lp.hero.e">app para iPhone · em construção</p>
+          <h1 data-i18n="lp.hero.h">registre o que você come com uma foto<span>.</span></h1>
+          <p class="case-lead" data-i18n="lp.hero.p">o nevy junta comida, treino e corrida no mesmo dia. Fotografe o prato ou escreva “duas maçãs”, e a refeição entra.</p>
+          <div class="lp-cta">
+            <a class="lp-btn" href="mailto:tiagorosario345@gmail.com?subject=nevy%3A%20quero%20ser%20avisado%20quando%20sair" data-i18n="lp.cta">me avise quando sair</a>
+            <a class="lp-link" href="#como" data-i18n="lp.hero.more">ver como funciona ↓</a>
+          </div>
+          <ul class="lp-trust">
+            <li data-i18n="lp.trust1">sem anúncios</li>
+            <li data-i18n="lp.trust2">registros no seu aparelho</li>
+            <li data-i18n="lp.trust3">feito em português</li>
+          </ul>
+        </div>
+        <div class="lp-hero-art" aria-hidden="false">
+          <figure class="phone lp-back"><div class="phone-screen"><img data-i18n-attr="alt:alt.camera" src="img/nevy/04-camera.webp" alt="câmera apontada para um prato com brócolis, cenoura, repolho, arroz e carne moída." width="402" height="874" decoding="async" /></div></figure>
+          <figure class="phone lp-front"><div class="phone-screen"><img data-i18n-attr="alt:alt.hoje" src="img/nevy/03-hoje.webp" alt="tela do dia com a lista de refeições, o total de calorias, os macros e o botão de câmera no centro." width="402" height="874" fetchpriority="high" decoding="async" /></div></figure>
         </div>
       </section>
 
-      <section class="case-section wrap">
-        <p class="eyebrow" data-i18n="case.context.e">contexto</p>
-        <div class="case-copy">
-          <h2 data-i18n="case.context.h">registrar o que se come dá trabalho demais.</h2>
-          <p data-i18n="case.context.p">a maioria dos apps de alimentação pede para digitar cada item, separa comida e atividade em produtos diferentes e mostra números sem dizer o que eles significam. Dá trabalho antes de ajudar.</p>
+      <section class="lp-section wrap" id="como">
+        <p class="eyebrow" data-i18n="lp.how.e">como funciona</p>
+        <h2 data-i18n="lp.how.h">três toques, e a refeição está registrada.</h2>
+        <div class="lp-steps">
+          <article>
+            <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.camera2" src="img/nevy/04-camera.webp" alt="câmera identificando um prato." width="402" height="874" loading="lazy" decoding="async" /></div></figure>
+            <span class="case-num">01</span>
+            <h3 data-i18n="lp.s1.h">fotografe ou escreva.</h3>
+            <p data-i18n="lp.s1.p">a câmera e o campo de texto ficam na tela principal. Uma foto do prato ou uma frase como “duas maçãs”.</p>
+          </article>
+          <article>
+            <figure class="phone"><div class="phone-screen scroll-screen"><div class="scroll-track"><img data-i18n-attr="alt:alt.resultado" src="img/nevy/05-resultado-completo.webp" alt="resultado: prato identificado, com macros, lista de alimentos estimados e o botão registrar." width="402" height="1254" loading="lazy" decoding="async" /></div><div class="scroll-bar" aria-hidden="true"><span class="scroll-x" data-i18n-skip>×</span><span class="scroll-go"><span data-i18n="res.log">registrar</span><b data-i18n-skip>✓</b></span></div></div></figure>
+            <span class="case-num">02</span>
+            <h3 data-i18n="lp.s2.h">confira o que ele entendeu.</h3>
+            <p data-i18n="lp.s2.p">o nevy sugere os alimentos, as porções e os macros. Você edita o que quiser, e nada entra no histórico até você tocar em registrar.</p>
+          </article>
+          <article>
+            <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.hoje2" src="img/nevy/03-hoje.webp" alt="tela do dia com refeições, total de 1.179 calorias e macros." width="402" height="874" loading="lazy" decoding="async" /></div></figure>
+            <span class="case-num">03</span>
+            <h3 data-i18n="lp.s3.h">o dia em uma tela só.</h3>
+            <p data-i18n="lp.s3.p">calorias, macros e refeições escritas do jeito que você falaria. Sem abrir menus para saber como você está.</p>
+          </article>
         </div>
       </section>
 
-      <section class="case-section wrap">
-        <p class="eyebrow" data-i18n="case.question.e">pergunta</p>
-        <div class="case-copy">
-          <h2 class="case-question" data-i18n="case.question.h">e se registrar uma refeição fosse tão fácil quanto tirar uma foto?</h2>
-          <p data-i18n="case.question.p">essa frase está na primeira tela do app e virou o critério para o resto: se uma etapa deixa o registro mais lento que tirar uma foto, ela precisa ter um bom motivo para estar ali.</p>
-        </div>
-      </section>
-
-      <section class="case-section wrap">
-        <p class="eyebrow" data-i18n="case.process.e">processo</p>
-        <div class="case-copy">
-          <h2 data-i18n="case.process.h">quatro decisões de design.</h2>
-        </div>
-      </section>
-
-      <section class="case-decision case-decision-trio wrap">
-        <div>
-          <span class="case-num">01</span>
-          <h3 data-i18n="d1.h">mostrar valor antes de pedir dados.</h3>
-          <p data-i18n="d1.p">o onboarding começa mostrando o que o app faz e só depois pergunta o objetivo. Cada opção abre uma explicação curta, e termos como taxa metabólica basal são explicados na própria tela.</p>
+      <section class="lp-section lp-split wrap" id="treino">
+        <div class="lp-split-copy">
+          <p class="eyebrow" data-i18n="lp.act.e">treino e corrida</p>
+          <h2 data-i18n="lp.act.h">o dia inteiro, não só o prato.</h2>
+          <p data-i18n="lp.act.p">o app sugere o treino do dia. Você toca em continuar e vai marcando cada exercício. A corrida mede tempo, distância, ritmo, percurso e elevação, e a sessão aparece na tela de bloqueio. Comida, treino e corrida ficam juntos no calendário.</p>
         </div>
         <div class="case-trio">
-          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.obj1" src="img/nevy/08-objetivo-perder.webp" alt="objetivo com a opção perder peso aberta: uma meta diária um pouco abaixo do que você gasta, com foco em alimentos que dão saciedade." width="402" height="874" loading="lazy" /></div></figure>
-          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.obj2" src="img/nevy/09-objetivo-saudavel.webp" alt="objetivo com a opção ser mais saudável aberta: uma meta diária próxima do que você gasta, com foco em variedade e regularidade." width="402" height="874" loading="lazy" /></div></figure>
-          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.obj3" src="img/nevy/10-objetivo-hipertrofia.webp" alt="objetivo com a opção ganhar hipertrofia aberta: uma meta diária um pouco acima do que você gasta, com proteína para acompanhar o treino." width="402" height="874" loading="lazy" /></div></figure>
+          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.historico" src="img/nevy/06-historico.webp" alt="detalhe de um dia no histórico: treino D com tempo, gasto e exercícios feitos, e logo abaixo a alimentação do dia." width="402" height="874" loading="lazy" decoding="async" /></div></figure>
+          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.corrida" src="img/nevy/12-corrida.webp" alt="detalhe de uma corrida de 5 km no histórico, com tempo, distância, gasto e ritmo médio." width="402" height="874" loading="lazy" decoding="async" /></div></figure>
+          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.treino" src="img/nevy/07-treino.webp" alt="treino A em andamento, com a legenda de cores e os exercícios ainda não iniciados." width="402" height="874" loading="lazy" decoding="async" /></div></figure>
         </div>
       </section>
 
-      <section class="case-decision case-decision-flip wrap">
-        <div class="case-pair">
-          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.camera2" src="img/nevy/04-camera.webp" alt="câmera identificando um prato." width="402" height="874" loading="lazy" /></div></figure>
-          <figure class="phone"><div class="phone-screen scroll-screen"><div class="scroll-track"><img data-i18n-attr="alt:alt.resultado" src="img/nevy/05-resultado-completo.webp" alt="resultado: prato identificado, com macros, lista de alimentos estimados e o botão registrar." width="402" height="1254" loading="lazy" /></div><div class="scroll-bar" aria-hidden="true"><span class="scroll-x" data-i18n-skip>×</span><span class="scroll-go"><span data-i18n="res.log">registrar</span><b data-i18n-skip>✓</b></span></div></div></figure>
+      <section class="lp-section lp-split wrap" id="metas">
+        <div class="lp-split-copy">
+          <p class="eyebrow" data-i18n="lp.goal.e">metas</p>
+          <h2 data-i18n="lp.goal.h">uma meta para o seu objetivo.</h2>
+          <p data-i18n="lp.goal.p">perder peso, ser mais saudável ou ganhar hipertrofia. A meta nunca desce abaixo da sua taxa metabólica basal, e os comentários não julgam nem mandam comer menos. Quem prefere não ver números pode ligar um modo que mostra o dia só com indicadores.</p>
         </div>
-        <div>
-          <span class="case-num">02</span>
-          <h3 data-i18n="d2.h">o reconhecimento sugere, a pessoa confirma.</h3>
-          <p data-i18n="d2.p">a foto gera uma estimativa do prato. Cada alimento aparece com a porção aproximada (“~100g”) e uma frase curta sobre a leitura. Dá para editar tudo antes de salvar, e nada entra no histórico até a pessoa tocar em registrar. Se a leitura errar, dá para registrar à mão.</p>
-        </div>
-      </section>
-
-      <section class="case-decision wrap">
-        <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.hoje2" src="img/nevy/03-hoje.webp" alt="tela do dia com refeições, total de 1.179 calorias e macros." width="402" height="874" loading="lazy" /></div></figure>
-        <div>
-          <span class="case-num">03</span>
-          <h3 data-i18n="d3.h">o dia em uma tela só.</h3>
-          <p data-i18n="d3.p">a tela principal mostra o que foi comido, o total de calorias e os macros, sem precisar abrir nada. As refeições aparecem escritas do jeito que a pessoa falaria (“duas maçãs”), e a câmera fica no centro, perto do polegar.</p>
-        </div>
-      </section>
-
-      <section class="case-decision case-decision-flip case-decision-trio wrap">
         <div class="case-trio">
-          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.historico" src="img/nevy/06-historico.webp" alt="detalhe de um dia no histórico: treino D com tempo, gasto e exercícios feitos, e logo abaixo a alimentação do dia." width="402" height="874" loading="lazy" /></div></figure>
-          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.corrida" src="img/nevy/12-corrida.webp" alt="detalhe de uma corrida de 5 km no histórico, com tempo, distância, gasto e ritmo médio." width="402" height="874" loading="lazy" /></div></figure>
-          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.treino" src="img/nevy/07-treino.webp" alt="treino A em andamento, com a legenda de cores e os exercícios ainda não iniciados." width="402" height="874" loading="lazy" /></div></figure>
-        </div>
-        <div>
-          <span class="case-num">04</span>
-          <h3 data-i18n="d4.h">registrar com poucos toques.</h3>
-          <p data-i18n="d4.p">a câmera e o campo de texto ficam na tela principal: uma foto ou uma frase como “duas maçãs” e a refeição entra. O treino segue a mesma ideia. O app sugere o treino do dia, você toca em continuar e vai marcando cada exercício. Comida, treino e corrida ficam juntos no calendário.</p>
+          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.obj1" src="img/nevy/08-objetivo-perder.webp" alt="objetivo com a opção perder peso aberta: uma meta diária um pouco abaixo do que você gasta, com foco em alimentos que dão saciedade." width="402" height="874" loading="lazy" decoding="async" /></div></figure>
+          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.obj2" src="img/nevy/09-objetivo-saudavel.webp" alt="objetivo com a opção ser mais saudável aberta: uma meta diária próxima do que você gasta, com foco em variedade e regularidade." width="402" height="874" loading="lazy" decoding="async" /></div></figure>
+          <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.obj3" src="img/nevy/10-objetivo-hipertrofia.webp" alt="objetivo com a opção ganhar hipertrofia aberta: uma meta diária um pouco acima do que você gasta, com proteína para acompanhar o treino." width="402" height="874" loading="lazy" decoding="async" /></div></figure>
         </div>
       </section>
 
-      <section class="case-section wrap">
-        <p class="eyebrow" data-i18n="case.build.e">por baixo do vidro</p>
+      <section class="lp-section wrap">
+        <p class="eyebrow" data-i18n="lp.feat.e">no dia a dia</p>
+        <h2 data-i18n="lp.feat.h">pensado para não atrapalhar.</h2>
+        <ul class="lp-feats">
+          <li><b data-i18n="lp.f1.h">funciona sem internet</b><span data-i18n="lp.f1.p">sem conexão, a foto fica guardada e você diz o que era depois.</span></li>
+          <li><b data-i18n="lp.f2.h">Apple Saúde</b><span data-i18n="lp.f2.p">grava treinos, corridas e peso no app Saúde e lê seu peso e batimentos.</span></li>
+          <li><b data-i18n="lp.f3.h">tela de bloqueio</b><span data-i18n="lp.f3.p">acompanhe treino, caminhada ou corrida na tela de bloqueio e na Dynamic Island.</span></li>
+          <li><b data-i18n="lp.f4.h">números com origem</b><span data-i18n="lp.f4.p">toda caloria mostra de onde veio: estimativa do nevy ou valor informado por você.</span></li>
+          <li><b data-i18n="lp.f5.h">histórico em calendário</b><span data-i18n="lp.f5.p">cada dia com a comida, o treino e a corrida no mesmo lugar.</span></li>
+          <li><b data-i18n="lp.f6.h">para compartilhar</b><span data-i18n="lp.f6.p">gere uma imagem do seu dia, treino ou corrida e mande para quem quiser.</span></li>
+        </ul>
+      </section>
+
+      <section class="lp-section lp-split wrap" id="privacidade">
+        <div class="lp-split-copy">
+          <p class="eyebrow" data-i18n="lp.priv.e">privacidade</p>
+          <h2 data-i18n="lp.priv.h">seus registros ficam com você.</h2>
+          <p data-i18n="lp.priv.p">refeições, treinos, corridas e peso ficam guardados no seu aparelho. O nevy não tem anúncios nem rastreamento e não vende dados. Os termos de uso e a política de privacidade ficam dentro do app, em linguagem comum, e você apaga a conta e tudo o que ela guardou com um toque.</p>
+        </div>
+        <ul class="lp-feats lp-feats-col">
+          <li><b data-i18n="lp.p1.h">sem anúncios</b><span data-i18n="lp.p1.p">nada de propaganda dentro do app.</span></li>
+          <li><b data-i18n="lp.p2.h">sem rastreamento</b><span data-i18n="lp.p2.p">o nevy não mede o que você faz para vender ou analisar.</span></li>
+          <li><b data-i18n="lp.p3.h">apague tudo</b><span data-i18n="lp.p3.p">um toque em configurações apaga a conta e os registros.</span></li>
+        </ul>
+      </section>
+
+      <section class="case-section wrap" id="andamento">
+        <p class="eyebrow" data-i18n="lp.build.e">em construção</p>
         <div class="case-copy">
-          <h2 data-i18n="case.build.h">três decisões de código.</h2>
-          <p data-i18n="case.build.p">o app já roda no simulador do iPhone. Estas escolhas só aparecem quando se lê o código.</p>
-        </div>
-      </section>
-
-      <section class="case-notes wrap">
-        <article>
-          <span class="case-num">05</span>
-          <h3 data-i18n="d5.h">a foto vira alimentos com valores.</h3>
-          <p data-i18n="d5.p">o reconhecimento identifica os alimentos do prato e liga cada um a uma base de dados. Essa base vem de dois parceiros, um com alimentos nacionais e outro com alimentos internacionais. Para rótulos e produtos industrializados, os valores também vêm dos parceiros, e não de uma estimativa. Quando a foto não tem nada reconhecível, o app não chuta um prato: guarda a foto como pendente e deixa a pessoa dizer o que era depois, inclusive sem internet.</p>
-        </article>
-        <article>
-          <span class="case-num">06</span>
-          <h3 data-i18n="d6.h">adaptável sem perder o layout.</h3>
-          <p data-i18n="d6.p">as telas foram desenhadas no tamanho do iPhone 17 Pro, 402 × 874, e todo o resto é ajuste. O conteúdo acompanha a largura do aparelho. Em telas mais baixas, como a do iPhone SE, o conteúdo de cima sobe antes de a escala diminuir, e os botões ficam presos às bordas seguras. Os alvos de toque têm pelo menos 44 pt. Um teste no SE mostrou o topo apertado, e a correção entrou no layout que todas as telas usam.</p>
-        </article>
-        <article>
-          <span class="case-num">07</span>
-          <h3 data-i18n="d7.h">a meta nunca fica abaixo da taxa basal.</h3>
-          <p data-i18n="d7.p">a meta usa a fórmula de Mifflin-St Jeor. Mesmo no objetivo de perder peso, ela não desce abaixo da taxa metabólica basal, o mínimo que o corpo gasta em repouso. Os comentários seguem a mesma regra: não sugerem comer menos e não julgam. Quem prefere não ver números pode ativar um modo que mostra o dia só com indicadores.</p>
-        </article>
-      </section>
-
-      <section class="case-code wrap" aria-label="trecho de NutritionCalculator.swift" data-i18n-attr="aria-label:case.code.label">
-        <pre data-i18n-skip><code>let base = 10 * profile.weightKg + 6.25 * profile.heightCm - 5 * Double(profile.age)
-
-let adjusted = max(daily * profile.goal.factor, basal)</code></pre>
-        <p data-i18n-skip>NutritionCalculator.swift</p>
-      </section>
-
-      <section class="case-decision wrap">
-        <figure class="phone"><div class="phone-screen"><img data-i18n-attr="alt:alt.termos" src="img/nevy/11-termos.webp" alt="termos de uso dentro do app, com as seções sobre Apple Saúde, uso permitido e propriedade intelectual." width="402" height="874" loading="lazy" /></div></figure>
-        <div>
-          <span class="case-num">08</span>
-          <h3 data-i18n="d8.h">de onde vem cada número.</h3>
-          <p data-i18n="d8.p">toda caloria registrada mostra a origem: estimativa do nevy ou valor informado pela pessoa. Os dados dos alimentos vêm dos dois parceiros. Os termos de uso e a política de privacidade ficam dentro do app, em linguagem comum. Sobre as fotos, os termos dizem que elas servem só para a análise e não ficam guardadas nos servidores. Se o alimento não for identificado, a imagem pode ficar até 2 dias para uma pessoa catalogar. Imagens com nudez podem ser guardadas e analisadas e levar à restrição da conta.</p>
-        </div>
-      </section>
-
-      <section class="case-section wrap">
-        <p class="eyebrow" data-i18n="case.visual.e">linguagem visual</p>
-        <div class="case-copy">
-          <h2 data-i18n="case.visual.h">o vidro aparece onde ajuda.</h2>
-          <p data-i18n="case.visual.p">botões e cards usam vidro no estilo Liquid Glass. O resto da tela fica com texto e contraste. A fonte monoespaçada e as letras minúsculas deixam o app com cara de conversa. As animações aparecem só quando algo muda de tela.</p>
-        </div>
-      </section>
-
-      <section class="case-section wrap">
-        <p class="eyebrow" data-i18n="case.learn.e">o que aprendi</p>
-        <div class="case-copy">
-          <h2 data-i18n="case.learn.h">o simulador mostra o que o Figma não mostra.</h2>
-          <p data-i18n="case.learn.p">desenhar antes no Figma poupou retrabalho, mas os problemas de verdade só apareceram com o app rodando: o topo apertado no iPhone SE e telas que eu não tinha desenhado, como a foto sem nada reconhecível. Agora eu levo a tela para o simulador mais cedo, antes de deixá-la perfeita.</p>
-        </div>
-      </section>
-
-      <section class="case-section wrap">
-        <p class="eyebrow" data-i18n="case.next.e">próximos passos</p>
-        <div class="case-copy">
-          <h2 data-i18n="case.next.h">o caminho até a primeira versão.</h2>
+          <h2 data-i18n="lp.build.h">onde o projeto está.</h2>
+          <p data-i18n="lp.build.p">o nevy ainda não está na App Store. Ele está em desenvolvimento e em testes no iPhone, e as telas desta página são do app de verdade, rodando. Algumas coisas ainda vão mudar até o lançamento.</p>
         </div>
         <ol class="case-timeline">
           <li><b data-i18n="t1.b">definição</b><span data-i18n="t1.s">escopo, revisão do Figma e arquitetura</span><i data-i18n="st.done">feito</i></li>
@@ -198,22 +153,23 @@ let adjusted = max(daily * profile.goal.factor, basal)</code></pre>
         </ol>
       </section>
 
-      <section class="case-next wrap">
-        <p class="eyebrow" data-i18n="case.follow.e">quer acompanhar?</p>
-        <a href="./#contato" data-i18n="case.follow.cta">vamos conversar<span>.</span></a>
-        <a class="case-more" href="primeiro-commit" data-i18n="case.more.pc">próximo projeto: <b>primeiro commit</b> →</a>
+      <section class="case-next wrap" id="avisar">
+        <p class="eyebrow" data-i18n="lp.end.e">quer ser dos primeiros?</p>
+        <a href="mailto:tiagorosario345@gmail.com?subject=nevy%3A%20quero%20ser%20avisado%20quando%20sair" data-i18n="lp.end.cta">me avise quando sair<span>.</span></a>
+        <p class="lp-note" data-i18n="lp.end.note">é um e-mail direto para mim, sem cadastro. Eu aviso quando houver teste ou lançamento.</p>
+        <a class="case-more" href="nevy-case" data-i18n="lp.end.case">como o nevy foi desenhado e programado: <b>ver o case</b> →</a>
         <button class="share" type="button" data-share="img/story/nevy.jpg" data-share-url="https://tithr.github.io/portfolio/nevy"><span data-i18n="share.btn">compartilhar no story</span></button><span class="share-note" role="status" aria-live="polite"></span>
       </section>
     </main>
 
     <footer class="wrap">
-      <span>© 2026 Tiago Rosario</span>
+      <span data-i18n="lp.foot.by">nevy, por <a href="./">Tiago Rosario</a></span>
       <span data-i18n="footer.made">feito em minúsculas</span>
       <a href="https://github.com/tithr" target="_blank" rel="noreferrer">github ↗</a>
       <span class="footer-note" data-i18n="footer.privacy">sem cookies. As visitas são contadas de forma anônima.</span>
     </footer>
-    <script src="i18n.js?v=9"></script>
-    <script src="lenis.min.js"></script>
-    <script src="site.js?v=2"></script>
+    <script src="i18n.js?v=10" defer></script>
+    <script src="lenis.min.js" defer></script>
+    <script src="site.js?v=2" defer></script>
   </body>
 </html>
