@@ -318,17 +318,26 @@ footer a { color: var(--ink); }
 .lp-link:hover { color: var(--sky); }
 .lp-trust { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 34px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 13px; }
 .lp-trust li::before { content: "·"; margin-right: 8px; color: var(--acid); }
-.lp-hero-art { position: relative; display: block; min-height: 0; aspect-ratio: 1 / 1.02; }
+.lp-hero-art { position: relative; isolation: isolate; display: block; aspect-ratio: 1 / 1.05; }
+.lp-hero-art::before { content: ""; position: absolute; inset: 4% -6% 0; z-index: -1; background: radial-gradient(closest-side, rgba(41,151,255,.30), rgba(122,92,255,.12) 55%, transparent 100%); }
 .lp-hero-art .phone { --pw: 300px; position: absolute; margin: 0; }
-.lp-front { width: 52%; right: 6%; top: 0; z-index: 2; transform: rotate(2.5deg); }
-.lp-back { width: 46%; left: 0; top: 14%; z-index: 1; transform: rotate(-6deg); opacity: .92; }
+.lp-front { width: 54%; right: 4%; top: 0; z-index: 2; }
+.lp-back { width: 46%; left: 0; top: 17%; z-index: 1; filter: brightness(.72); }
+/* aparelho da landing: moldura fina e escura, sem inclinação */
+.lp .phone { padding: 2.3%; border-radius: 15% / 7%; background: linear-gradient(160deg, #3a404c, #12151c 38%, #1d222c); box-shadow: inset 0 0 0 1px rgba(255,255,255,.2), 0 0 0 1px #000, 0 40px 70px -30px rgba(0,0,0,.9); }
+.lp .phone::before { background: linear-gradient(90deg, #1d222c, #343b49); }
+.lp .phone::after { background: linear-gradient(270deg, #1d222c, #343b49); box-shadow: 0 calc(var(--pw, 300px) * .2) 0 #232934, 0 calc(var(--pw, 300px) * .36) 0 #232934; }
+.lp .phone-screen { border-radius: 12.6% / 5.9%; box-shadow: 0 0 0 1.5px #000; }
+.lp-static .scroll-track img { position: absolute; left: 0; top: 0; width: 100%; height: auto; animation: none; }
 .lp-section { padding: 120px 0 0; }
 .lp-section h2 { max-width: 760px; margin: 14px 0 0; font-size: clamp(32px, 4.4vw, 58px); font-weight: 700; letter-spacing: -.065em; line-height: 1; }
-.lp-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; margin-top: 60px; }
-.lp-steps article { display: grid; align-content: start; justify-items: start; }
-.lp-steps .phone { --pw: 260px; width: 100%; max-width: 260px; margin: 0 0 26px; }
-.lp-steps h3 { margin: 8px 0 12px; font-size: clamp(22px, 2.3vw, 30px); font-weight: 700; letter-spacing: -.05em; line-height: 1.05; }
-.lp-steps p { max-width: 330px; margin: 0; color: #d2d2d7; font-size: 16px; letter-spacing: -.012em; line-height: 1.55; }
+.lp-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 56px; }
+.lp-steps article { position: relative; display: flex; flex-direction: column; overflow: hidden; padding: 30px 28px 0; border: 1px solid var(--line); background: radial-gradient(120% 70% at 50% 100%, rgba(41,151,255,.20), transparent 70%), #0b0e14; }
+.lp-steps .case-num { order: 1; }
+.lp-steps h3 { order: 2; margin: 8px 0 12px; font-size: clamp(22px, 2.3vw, 30px); font-weight: 700; letter-spacing: -.05em; line-height: 1.05; }
+.lp-steps h3 { min-height: 2.1em; }
+.lp-steps p { order: 3; min-height: 6.4em; max-width: 340px; margin: 0; color: #d2d2d7; font-size: 16px; letter-spacing: -.012em; line-height: 1.55; }
+.lp-steps .phone { order: 4; --pw: 260px; width: 72%; max-width: 300px; margin: 36px auto -26%; flex: none; }
 .lp-split { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 64px; align-items: center; }
 .lp-split-copy p:not(.eyebrow) { max-width: 520px; margin: 22px 0 0; color: #d2d2d7; font-size: 17px; letter-spacing: -.015em; line-height: 1.58; }
 .lp-split .case-trio .phone { --pw: 220px; }
@@ -345,8 +354,9 @@ footer a { color: var(--ink); }
 @media (max-width: 860px) {
   .lp-hero { grid-template-columns: minmax(0, 1fr); gap: 34px; padding-top: 48px; }
   .lp-hero-art { max-width: 420px; margin: 0 auto; width: 100%; }
-  .lp-steps { grid-template-columns: minmax(0, 1fr); gap: 54px; }
-  .lp-steps .phone { max-width: 240px; }
+  .lp-steps { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .lp-steps h3, .lp-steps p { min-height: 0; }
+  .lp-steps .phone { width: 70%; max-width: 280px; margin-top: 34px; }
   .lp-split { grid-template-columns: minmax(0, 1fr); gap: 40px; }
   .lp-feats { grid-template-columns: repeat(2, 1fr); }
   .lp-section { padding-top: 90px; }
@@ -438,3 +448,4 @@ footer a { color: var(--ink); }
 .scroll-go { position: relative; flex: 1; }
 .scroll-go b { position: absolute; right: 6cqw; font-size: 5.4cqw; font-weight: 400; opacity: .85; }
 @media (prefers-reduced-motion: reduce) { .scroll-track img { animation: none; } }
+.lp-hero, .lp-steps article { overflow-x: clip; }
