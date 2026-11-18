@@ -312,11 +312,10 @@ footer a { color: var(--ink); }
 .lp-hero h1 { margin: 18px 0 24px; font-size: clamp(42px, 6.2vw, 84px); letter-spacing: -.07em; line-height: .96; }
 .lp-hero h1 span { color: var(--acid); }
 .lp-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; margin-top: 34px; }
-.lp-btn { display: inline-block; padding: 16px 30px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; background: linear-gradient(160deg, rgba(74,92,214,.55), rgba(38,51,132,.5) 55%, rgba(38,51,132,.35)); -webkit-backdrop-filter: blur(18px) saturate(180%); backdrop-filter: blur(18px) saturate(180%); box-shadow: inset 0 1px 1px rgba(255,255,255,.35), inset 0 -8px 16px rgba(10,14,48,.35), 0 10px 30px -12px rgba(38,51,132,.8); color: #fff; font: inherit; font-size: 16px; font-weight: 700; letter-spacing: -.02em; }
+.lp-btn { display: inline-block; padding: 16px 30px; border: 0; border-radius: 999px; background: #263384; color: #fff; font: inherit; font-size: 16px; font-weight: 700; letter-spacing: -.02em; }
 .lp-btn:disabled { cursor: not-allowed; }
 .lp-soon { max-width: 440px; margin: 22px 0 0; color: #d2d2d7; font-size: 15px; line-height: 1.5; }
-.status.lp-off { padding: 8px 18px; text-decoration: none; color: #fff; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; background: linear-gradient(160deg, rgba(74,92,214,.55), rgba(38,51,132,.5)); -webkit-backdrop-filter: blur(14px) saturate(180%); backdrop-filter: blur(14px) saturate(180%); box-shadow: inset 0 1px 1px rgba(255,255,255,.35); cursor: default; }
-.lp .lang-switch { padding: 5px 14px; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; background: rgba(255,255,255,.08); -webkit-backdrop-filter: blur(14px) saturate(180%); backdrop-filter: blur(14px) saturate(180%); box-shadow: inset 0 1px 1px rgba(255,255,255,.25); }
+.status.lp-off { padding: 8px 18px; text-decoration: none; color: #fff; border-radius: 999px; background: #263384; cursor: default; }
 .lp-big { margin: 24px 0 0; font-size: clamp(54px, 9vw, 128px); font-weight: 700; letter-spacing: -.09em; line-height: .9; }
 .lp-big span { color: #5a6be0; }
 .lp-link { color: var(--muted); font-size: 15px; font-weight: 500; transition: color .2s; }
