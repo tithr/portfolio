@@ -473,3 +473,4 @@ footer a { color: var(--ink); }
 
 /* telas largas: o site inteiro fica um pouco menor em zoom 100% */
 @media (min-width: 1000px) { body { zoom: .9; } }
+@media (max-width: 999px) { body { zoom: .92; } }
